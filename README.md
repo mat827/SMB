@@ -25,6 +25,4 @@ SMB
 ## 設計書
 
 ### 機能一覧
-https://docs.google.com/spreadsheets/d/1PpSMSytPTj0FGJ_AmHRLSiwg39dXvVA4AnjkYBdqatQ/edit#gid=0
-
-
+https://docs.google.com/spreadsheets/d/1PpSMSytPTj0FGJ_AmHRLSiwg39dXvVA4AnjkYBdqatQ/edit?usp=sharing
