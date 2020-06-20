@@ -1,2 +1,18 @@
-<h1>Stretchs#show</h1>
-<p>Find me in app/views/stretchs/show.html.erb</p>
+<div class='row'>
+  <div class='col-md-3 col-xs-12'>
+    <h2>カテゴリ</h2>
+  </div>
+  <div class='col-md-9 col-xs-12'>
+    <div id='stretch-show-content'>
+      <div class='thumbnail'>
+        <%= attachment_image_tag @stretch, :image, :fill, 500, 500, fallback: "no_image.png", size: "500x500" %>
+      </div>
+    </div>
+    <div class='col-md-5 col-xs-12'>
+      <h2><%= @stretch.name %></h2>
+      <h3><%= @stretch.action_muscles %></h3>
+      <p id='stretch-explanation'><%= @stretch.explanation %></p>
+    </div>
+    <h3>お気に入りボタン</h3>
+  </div>
+</div>
