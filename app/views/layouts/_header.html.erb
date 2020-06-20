@@ -28,6 +28,9 @@
                 <i class="glyphicon glyphicon-log-out" aria-hidden="true">ログアウト</i>
               <% end %>
           </li>
+        <% elsif admin_signed_in? %>
+          <li><%=link_to 'ストレッチ一覧', admins_stretchs_path, class: 'btn-sm' %></li>
+          <li><%= link_to 'ログアウト', destroy_admin_session_path, method: :delete,class: 'btn-sm' %></li>
         <% else %>
           <li>
             <%= link_to about_path do %>

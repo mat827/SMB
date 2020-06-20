@@ -1,2 +1,13 @@
-<h1>Stretchs#index</h1>
-<p>Find me in app/views/stretchs/index.html.erb</p>
+<div class='row'>
+  <div class='col-md-3 col-xs-12'>
+    <h2>カテゴリー一覧</h2>
+  </div>
+  <div class='col-md-9 col-xs-12'>
+    <h2><%= @title %>一覧</h2>
+  　<p>(全<%= @stretchs.count %>件)</p>
+    <%= render 'stretchs/stretchs_index', stretchs: @stretchs %>
+    <div class='child-center'>
+      <%= paginate @stretchs %>
+    </div>
+  </div>
+</div>

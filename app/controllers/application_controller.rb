@@ -5,7 +5,12 @@ class ApplicationController < ActionController::Base
   # アクションをする前に実行される（deviseにまつわる画面に行った時）
   private
   def after_sign_in_path_for(resource)
+     case resource
+    when Admin
+      admins_homes_path
+    when User
       stretchs_index_path
+    end
   end
 
   def after_sign_out_path_for(resource)
