@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+
   validates :first_name, presence: true
   validates :family_name, presence: true
   validates :family_name_yomi, presence: true
@@ -27,6 +28,15 @@ class User < ApplicationRecord
       '有効'
     end
   end
+
+  #検索機能(会員検索)
+  def self.search(str)
+    return all unless str
+    where(['family_name LIKE ?', "%#{str}%"]).or(where(['first_name LIKE ?', "%#{str}%"])).
+      or(where(['family_name_yomi LIKE ?', "%#{str}%"])).
+      or(where(['first_name_yomi LIKE ?', "%#{str}%"]))
+  end
+
 
 
 end

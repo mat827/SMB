@@ -30,6 +30,8 @@
           </li>
         <% elsif admin_signed_in? %>
           <li><%=link_to 'ストレッチ一覧', admins_stretchs_path, class: 'btn-sm' %></li>
+          <li><%= link_to '会員一覧', admins_users_path,class: 'btn-sm' %></li>
+          <li><%=link_to 'カテゴリ一覧', admins_categorys_path, class: 'btn-sm' %></li>
           <li><%= link_to 'ログアウト', destroy_admin_session_path, method: :delete,class: 'btn-sm' %></li>
         <% else %>
           <li>

@@ -38,6 +38,7 @@
           <%= f.label :category, 'カテゴリー名' %>
         </div>
         <div class='col-xs-5'>
+          <%= f.collection_select :category_id, Category.all, :id, :name %>
         </div>
       </div>
     </div>
