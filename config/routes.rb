@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  namespace :admins do
+    get 'users/index'
+    get 'users/show'
+    get 'users/edit'
+    get 'users/edit_withdraw'
+  end
+  namespace :admins do
+    get 'categorys/index'
+    get 'categorys/edit'
+  end
   devise_for :admins, skip: :all #スキップして以下のルーティングのみ機能（devise_scope)
   devise_scope :admin do
     get 'admins/sign_in' => 'admins/sessions#new', as: 'new_admin_session'
@@ -19,8 +29,13 @@ Rails.application.routes.draw do
   get 'users/edit_withdraw' => 'users#edit_withdraw', as: 'edit_user_withdraw'
   put 'users/withdraw' => 'users#withdraw', as: 'user_withdraw'
 
+  get 'category/:id'=> 'categorys#search', as: 'categorys_search'
+
   namespace :admins do
+    resources :categorys, only: [:index, :create, :edit, :update]
     resources :stretchs, except: :destroy #except(destroy以外)
+    resources :users, only: [:index, :show, :edit, :update]
     get '/homes' => 'homes#index', as: 'homes'
+    get '/search' => 'searches#search', as: 'search'
   end
 end

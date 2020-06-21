@@ -18,7 +18,7 @@
       <tr>
         <td><%= stretch.id %></td>
         <td><%= link_to stretch.name, admins_stretch_path(stretch.id) %></td>
-        <td></td>
+        <td><%= stretch.category.name %></td>
       </tr>
       <% end %>
       <%= paginate @stretchs %>

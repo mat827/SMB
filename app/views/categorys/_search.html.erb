@@ -1,0 +1,10 @@
+<div id='category-search'>
+  <h2>カテゴリ検索</h2>
+  <ul>
+    <% @categorys.each do |category| %>
+      <li>
+        <%= link_to category.name, categorys_search_path(category) %>
+      </li>
+    <% end %>
+  </ul>
+</div>
