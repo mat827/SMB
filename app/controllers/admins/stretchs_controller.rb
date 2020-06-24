@@ -2,7 +2,7 @@ class Admins::StretchsController < ApplicationController
   before_action :authenticate_admin!
 
   def index
-    @stretchs = Stretch.page(params[:page])
+    @stretchs = Stretch.page(params[:page]).search(params[:str])
   end
 
   def new
