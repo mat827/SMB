@@ -14,6 +14,9 @@ class User < ApplicationRecord
   validates :phone_number, presence: true
   validates :is_valid, presence: true
 
+  has_many :favorites
+  has_many :stretchs, dependent: :destroy
+
 
 # ログイン時に退会済みのユーザーが入れなくする
   enum is_valid: { 無効: false, 有効: true }

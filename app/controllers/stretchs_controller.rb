@@ -11,5 +11,7 @@ class StretchsController < ApplicationController
   def show
     @categorys = Category.where(is_valid: true)
     @stretch = Stretch.find(params[:id])
+    @favorite = current_user.favorites.find_by(stretch_id: @stretch.id)
+    @favorites= @stretch.favorite_users
   end
 end

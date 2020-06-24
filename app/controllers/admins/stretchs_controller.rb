@@ -11,7 +11,7 @@ class Admins::StretchsController < ApplicationController
 
   def create
     @stretch = Stretch.new(stretch_params)
-    if @stretch.save
+    if @stretch.save!
       redirect_to admins_stretchs_path
     else
       render 'new'

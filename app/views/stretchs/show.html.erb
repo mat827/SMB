@@ -12,7 +12,17 @@
       <h2><%= @stretch.name %></h2>
       <h3><%= @stretch.action_muscles %></h3>
       <p id='stretch-explanation'><%= @stretch.explanation %></p>
+      <% if @favorite.present? %>
+        <h2>この投稿のお気に入りを解除しますか？</h2>
+        <div class="like-btn">
+          <%= link_to "解除する", favorite_path(id: @favorite.id), method: :delete, class: "btn btn-danger" %>
+        </div>
+    <% else %>
+        <h2>この投稿のお気に入りに登録しますか？</h2>
+        <div class="like-btn">
+          <%= link_to "登録をする", favorites_path(stretch_id: @stretch.id), method: :post, class:"btn btn-primary like-btn" %>
+        </div>
+      <% end %>
     </div>
-    <h3>お気に入りボタン</h3>
   </div>
 </div>

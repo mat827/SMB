@@ -9,9 +9,7 @@ Rails.application.routes.draw do
   get 'about' => 'homes#about', as:'about'
   devise_for :users
 
-  resource :stretchs, only: [:index, :show]
-  get 'stretchs/index' => 'stretchs#index'
-  get 'stretchs/:id' =>'stretchs#show', as: 'stretchs_show'
+  resources :stretchs, only: [:index, :show]
 
   resource :users, only: [:show, :edit]
   get 'users/edit_info' => 'users#edit_info'
@@ -20,6 +18,8 @@ Rails.application.routes.draw do
   put 'users/withdraw' => 'users#withdraw', as: 'user_withdraw'
 
   get 'category/:id'=> 'categorys#search', as: 'categorys_search'
+
+  resources :favorites, only: [:destroy, :create]
 
   namespace :admins do
     resources :categorys, only: [:index, :create, :edit, :update]
