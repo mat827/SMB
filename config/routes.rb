@@ -1,14 +1,4 @@
 Rails.application.routes.draw do
-  namespace :admins do
-    get 'users/index'
-    get 'users/show'
-    get 'users/edit'
-    get 'users/edit_withdraw'
-  end
-  namespace :admins do
-    get 'categorys/index'
-    get 'categorys/edit'
-  end
   devise_for :admins, skip: :all #スキップして以下のルーティングのみ機能（devise_scope)
   devise_scope :admin do
     get 'admins/sign_in' => 'admins/sessions#new', as: 'new_admin_session'

@@ -4,6 +4,9 @@
       <button type="button" class="btn navbar-toggle" data-toggle="collapse" data-target="#top-nav" >
         <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true" style="color: white"></span>
       </button>
+      <% if admin_signed_in? %>
+        <%= render 'layouts/search_bar' %>
+      <% end %>
     </div>
     <div class='collapse navbar-collapse' id='top-nav'>
       <ul class='nav navbvar-nav navbar-right'>

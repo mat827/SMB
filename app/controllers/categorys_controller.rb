@@ -4,7 +4,8 @@ class CategorysController < ApplicationController
   def search
     @categorys = Category.where(is_valid: true)
     @category = Category.find(params[:id])
-    @stretchs = @category.stretchs.all.page(params[:page]).per(8)
+    @q = @category.stretchs.all.ransack(params[:q])
+    @stretchs = @q.result(distinct: true).page(params[:page]).per(8)
     @title = @category.name
     render 'stretchs/index'
   end
