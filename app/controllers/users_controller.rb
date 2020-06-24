@@ -2,6 +2,8 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
   def show
     @user = current_user
+    @favorite = Favorite.where('user_id = ?', @user)
+    @favorites = @user.favorites
   end
 
   def edit_info

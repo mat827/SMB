@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
     when Admin
       admins_homes_path
     when User
-      stretchs_index_path
+      stretchs_path
     end
   end
 

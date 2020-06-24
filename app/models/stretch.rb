@@ -6,6 +6,10 @@ class Stretch < ApplicationRecord
 
   attachment :image
 
+  has_many :favorites, dependent: :destroy
+  has_many :favorite_users, through: :favorites, source: :user
+  belongs_to :user, optional: true
+
   def self.search(str)
     return all unless str
     where(["name LIKE ?", "%#{str}%"])

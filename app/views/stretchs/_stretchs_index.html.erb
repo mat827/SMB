@@ -2,7 +2,7 @@
   <% stretchs.each do |stretch| %>
     <div class='col-md-3 col-xs-12'>
       <div class='thumbnail'>
-        <%= link_to stretchs_show_path(stretch) do %>
+        <%= link_to stretch_path(stretch) do %>
           <%= attachment_image_tag stretch, :image, :fill, 300, 300 %>
           <div class='caption'>
             <label><%= stretch.name %></label>
