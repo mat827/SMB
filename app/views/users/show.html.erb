@@ -1,6 +1,6 @@
 <h2><i class="fa fa-address-card"></i>マイページ</h2>
 <h3><i class="fa fa-address-book"></i>登録情報</h3>
-<%= link_to "編集する", users_edit_info_path, class: "btn btn-sm btn-success" %>
+<%= link_to "編集する", edit_user_path, class: "btn btn-sm btn-success" %>
 <%= link_to "パスワードを変更する", edit_user_registration_path, class: "btn btn-sm btn-success" %>
 
 <div class="table-wrapper">
@@ -25,5 +25,6 @@
     </tbody>
   </table>
 </div>
-<h3>お気に入りリスト</h3>
-<%= render 'favorites/favorite', favorites: @favorites %>
+<%= link_to "お気に入りリスト", favorite_stretch_path, class: "btn btn-sm btn-success" %>
+<%= link_to "口コミリスト", user_path, class: "btn btn-sm btn-success" %>
+<%= render 'reviews/review_index', reviews: @reviews %>

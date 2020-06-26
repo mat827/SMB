@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CategorysController < ApplicationController
   before_action :authenticate_user!
 
@@ -9,7 +11,6 @@ class CategorysController < ApplicationController
     @title = @category.name
     render 'stretchs/index'
   end
-
 end
 
 # find＝主キーに対応するレコードを取り出す

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Admins::StretchsController < ApplicationController
   before_action :authenticate_admin!
 
@@ -38,7 +40,6 @@ class Admins::StretchsController < ApplicationController
   private
 
   def stretch_params
-    params.require(:stretch).permit(:category_id, :favorite_id, :name, :image, :explanation,:action_muscles)
+    params.require(:stretch).permit(:category_id, :favorite_id, :name, :image, :explanation, :action_muscles)
   end
-
 end

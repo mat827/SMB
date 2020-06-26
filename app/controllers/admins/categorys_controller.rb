@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Admins::CategorysController < ApplicationController
   before_action :authenticate_admin!
 
@@ -11,7 +13,7 @@ class Admins::CategorysController < ApplicationController
     if @category.save
       redirect_to admins_categorys_path
     else
-      @categorys =Category.all
+      @categorys = Category.all
       render :index
     end
   end
