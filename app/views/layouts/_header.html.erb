@@ -32,6 +32,11 @@
             <% end %>
           </li>
           <li>
+            <%= link_to new_contact_path do %>
+              <i class="">質問</i>
+            <% end %>
+          </li>
+          <li>
               <%= link_to destroy_user_session_path, method: :delete do %>
                 <i class="glyphicon glyphicon-log-out" aria-hidden="true">ログアウト</i>
               <% end %>
@@ -40,6 +45,7 @@
           <li><%=link_to 'ストレッチ一覧', admins_stretchs_path, class: 'btn-sm' %></li>
           <li><%= link_to '会員一覧', admins_users_path,class: 'btn-sm' %></li>
           <li><%=link_to 'カテゴリ一覧', admins_categorys_path, class: 'btn-sm' %></li>
+          <li><%=link_to '質問一覧', admins_contacts_path, class: 'btn-sm' %></li>
           <li><%= link_to 'ログアウト', destroy_admin_session_path, method: :delete,class: 'btn-sm' %></li>
         <% else %>
           <li>
