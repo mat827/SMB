@@ -1,14 +1,17 @@
+# frozen_string_literal: true
+
 class Admins::UsersController < ApplicationController
   before_action :authenticate_admin!
   def index
     @users = User.search(params[:str])
   end
+
   def show
     @user = User.find(params[:id])
   end
 
   def edit
-     @user = User.find(params[:id])
+    @user = User.find(params[:id])
   end
 
   def update
@@ -26,8 +29,8 @@ class Admins::UsersController < ApplicationController
 
   def withdraw
     @user = @user = User.find(params[:id])
-    @user.update(is_valid: true) # 会員ステータスの退会を有効にする
-    @end_user.destroy
+    @user.update!(is_valid: true) # 会員ステータスの退会を有効にする
+    @end_user.destroy!
     redirect_to root_path
   end
 
@@ -41,6 +44,6 @@ class Admins::UsersController < ApplicationController
       :first_name_yomi,
       :phone_number,
       :is_valid
-      )
+    )
   end
 end

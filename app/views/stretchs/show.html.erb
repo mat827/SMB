@@ -8,10 +8,10 @@
         <%= attachment_image_tag @stretch, :image, :fill, 500, 500, fallback: "no_image.png", size: "500x500" %>
       </div>
     </div>
-    <div class='col-md-5 col-xs-12'>
+    <div class='col-md-12'>
       <h2><%= @stretch.name %></h2>
-      <h3><%= @stretch.action_muscles %></h3>
-      <p id='stretch-explanation'><%= @stretch.explanation %></p>
+      <h2><%= @stretch.action_muscles %></h2>
+      <h2><%= @stretch.explanation %></h2>
       <% if @favorite.present? %>
         <h2>この投稿のお気に入りを解除しますか？</h2>
         <div class="like-btn">
@@ -25,4 +25,8 @@
       <% end %>
     </div>
   </div>
+    <h2>口コミ一覧</h2></h2>
+    <%= render 'reviews/review_index', reviews: @reviews, user: @user %>
+    <h2>口コミ投稿する</h2>
+    <%= render 'reviews/new_review', review: @review, stretch: @stretch %>
 </div>
