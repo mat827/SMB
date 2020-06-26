@@ -25,11 +25,14 @@ Rails.application.routes.draw do
 
   resources :reviews, only: %i[new create destroy show edit update index]
 
+  resources :contacts
+
   namespace :admins do
     resources :categorys, only: %i[index create edit update]
     resources :stretchs, except: :destroy # except(destroy以外)
     resources :users, only: %i[index show edit update]
     get '/homes' => 'homes#index', as: 'homes'
     get '/search' => 'searches#search', as: 'search'
+    resources :contacts
   end
 end

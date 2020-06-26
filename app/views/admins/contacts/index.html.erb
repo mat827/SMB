@@ -1,0 +1,23 @@
+<div class='row'>
+  <h2>質問一覧</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>質問ID</th>
+        <th>名前</th>
+        <th>メールアドレス</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @contacts.each do |contact| %>
+      <tr>
+        <td><%= contact.id %></td>
+        <td><%= link_to contact.name, admins_contact_path(contact.id) %></td>
+        <td><%= contact.email %></td>
+        <td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
