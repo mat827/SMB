@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class StretchsController < ApplicationController
-  before_action :authenticate_user!, only: [:show]
+  before_action :authenticate_user!
   def index
     # is_validがマッチするレコードを全て取得
     @categorys = Category.where(is_valid: true)
