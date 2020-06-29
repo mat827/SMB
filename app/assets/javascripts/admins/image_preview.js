@@ -3,7 +3,7 @@ $(document).ready(function () {
   $(document).on('change', '#stretch_image', function () {
     console.log("ok")
     // .file_filedからデータを取得して変数fileに代入します
-    const file = this.files[0];
+    //const file = this.files[0];
     // FileReaderオブジェクトを作成します
     const reader = new FileReader();
     // DataURIScheme文字列を取得します

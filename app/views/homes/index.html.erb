@@ -1,3 +1,5 @@
+<div class='row'>
+  <div clss='col-md-9 col-xs-12 col-xs-3'>
 <div class='cover'>
   <div class='cover-inner'>
     <div class='cover-contents'>
@@ -7,6 +9,8 @@
       <% end %>
     </div>
   </div>
+</div>
+</div>
 </div>
 
 <div class='container'>
@@ -38,12 +42,11 @@
     </div>
   </div>
 </div>
-<div class="row">
-  <div class="col-md-9 col-xs-12" id="recommended-items">
-    <h2>オススメ</h2>
+<div class="col-md-6 col-xs-6 col-md-push-3 text-center" id="recommended-items">
+  <h2>オススメ</h2>
     <%= render 'stretchs/stretchs_index', stretchs: @stretchs %>
     <%= link_to 'もっと見る', stretchs_path %>
-  </div>
+    <h2>最新の口コミ</h2>
+    <%= render 'reviews/review_index', reviews: @reviews %> 
 </div>
-<h2>最新の口コミ</h2>
-<%= render 'reviews/review_index', reviews: @reviews %>
+
