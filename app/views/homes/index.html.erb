@@ -1,2 +1,42 @@
-<h1>Homes#index</h1>
-<p>Find me in app/views/homes/index.html.erb</p>
+<div class='cover'>
+  <div class='cover-inner'>
+    <div class='cover-contents'>
+      <h1>ストレッチで快適な日々を送りたいあなたへ</h1>
+      <% unless signed_in? %>
+        <%=link_to 'SMBを始める', new_user_registration_path, class: 'btn btn-success btn-lg cover-button' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class='container'>
+  <p></p>
+  <!-- サービス紹介 -->
+  <div class='features'>
+    <div class='container'>
+      <div class='section-title text-center'>
+        <h1 class='title'>SMBとは</h1>
+        <h4 class='title'>ストレッチをすることで体をメンテナンスし、日々快適なボディを目指していくストレッチサービスです</h4>
+      </div>
+      <div class='row'>
+        <div class='col-md-4 col-sm-6 feature text-center'>
+          <span aria-hidden='true' class='glyphicon glyphicon-check' style='font-size: 40px'></span>
+          <h3 class='feature-title'>リアルな口コミ</h3>
+          <p>✔  実際の体験してもらった方々のリアルな口コミであなたに最適なストレッチをサポート</p>
+        </div>
+        <div class='col-md-4 col-sm-6 feature text-center'>
+          <span aria-hidden='true' class='glyphicon glyphicon-zoom-in' style='font-size: 40px'></span>
+          <h3 class='feature-title'>探しやすい</h3>
+          <p>✔  気になるストレッチをお気に入り登録や最新の口コミから検索可能</p>
+        </div>
+        <div class='col-md-4 col-sm-6 feature text-center'>
+          <span aria-hidden='true' class='glyphicon glyphicon-thumbs-up' style='font-size: 40px'></span>
+          <h3 class='feature-title'>見やすいレイアウト</h3>
+          <p>✔  PCやスマートフォンどちらからでも見やすい設計</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<h2>最新の口コミ</h2>
+<%= render 'reviews/review_index', reviews: @reviews %>

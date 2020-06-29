@@ -33,8 +33,7 @@ class ReviewsController < ApplicationController
   end
 
   def index
-    @q = Review.ransack(params[:q])
-    @reviews = @q.result(distinct: true).includes(:user, :stretch).order(created_at: :desc).page(params[:page])
+    @reviews = Review.includes(:user, :stretch).order(created_at: :desc).page(params[:page])
   end
 
   private
