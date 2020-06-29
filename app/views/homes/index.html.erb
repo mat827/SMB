@@ -1,3 +1,5 @@
+<div class='row'>
+  <div clss='col-md-9 col-xs-12 col-xs-3'>
 <div class='cover'>
   <div class='cover-inner'>
     <div class='cover-contents'>
@@ -7,6 +9,8 @@
       <% end %>
     </div>
   </div>
+</div>
+</div>
 </div>
 
 <div class='container'>
@@ -29,7 +33,7 @@
           <h3 class='feature-title'>探しやすい</h3>
           <p>✔  気になるストレッチをお気に入り登録や最新の口コミから検索可能</p>
         </div>
-        <div class='col-md-4 col-sm-6 feature text-center'>
+        <div class='col-md-4 col-sm-6  feature text-center'>
           <span aria-hidden='true' class='glyphicon glyphicon-thumbs-up' style='font-size: 40px'></span>
           <h3 class='feature-title'>見やすいレイアウト</h3>
           <p>✔  PCやスマートフォンどちらからでも見やすい設計</p>
@@ -38,12 +42,11 @@
     </div>
   </div>
 </div>
-<div class="row">
-  <div class="col-md-9 col-xs-12" id="recommended-items">
-    <h2>オススメ</h2>
+<div class="col-md-6 col-xs-4 col-md-push-3 text-center" id="recommended-items">
+  <h2>オススメ</h2>
     <%= render 'stretchs/stretchs_index', stretchs: @stretchs %>
     <%= link_to 'もっと見る', stretchs_path %>
-  </div>
+    <h2>最新の口コミ</h2>
+    <%= render 'reviews/review_index', reviews: @reviews %> 
 </div>
-<h2>最新の口コミ</h2>
-<%= render 'reviews/review_index', reviews: @reviews %>
+
