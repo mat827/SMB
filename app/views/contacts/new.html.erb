@@ -1,0 +1,19 @@
+<%= form_for @contact do |f| %>
+  <!-- 質問 -->
+<h2>質問</h2>
+  <div class="form-group row">
+    <div class="col-md-9">
+      <%= f.label :name, '名前 ', class:'col-md-3 col-form-label' %>
+      <%= f.text_field :name, autofocus: true, autocomplete: "name",class: "form-control"%>
+      <%= f.label "メールアドレス" %>
+      <%= f.text_field :email, autofocus: true, autocomplete: "email",class: "form-control"%>
+
+      <%= f.label :content, '口コミ内容 ', class:'col-md-3 col-form-label' %>
+      <%= f.text_area :content, class: "form-control", rows: "8",
+        placeholder:'ストレッチについて聞きたいことや他にもいろんな質問に答えていきますのでご自由に質問してください！' %>
+    </div>
+  </div>
+  <div class='action'>
+    <%= f.submit "送信する",class: "btn-sm btn-success" %>
+  </div>
+<% end %>

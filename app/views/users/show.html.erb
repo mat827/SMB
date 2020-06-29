@@ -1,0 +1,30 @@
+<h2><i class="fa fa-address-card"></i>マイページ</h2>
+<h3><i class="fa fa-address-book"></i>登録情報</h3>
+<%= link_to "編集する", edit_user_path, class: "btn btn-sm btn-success" %>
+<%= link_to "パスワードを変更する", edit_user_registration_path, class: "btn btn-sm btn-success" %>
+
+<div class="table-wrapper">
+  <table class="table table-bordered">
+    <tbody>
+      <tr class="row">
+        <th class="col-xs-3">氏名</th>
+        <td class="col-xs-9"><%= @user.family_name %><%= @user.first_name %></td>
+      </tr>
+      <tr class="row">
+        <th class="col-xs-3">カナ</th>
+        <td class="col-xs-9"><%= @user.family_name_yomi %><%= @user.first_name_yomi %></td>
+      </tr>
+      <tr class="row">
+        <th class="col-xs-3">電話番号</th>
+        <td class="col-xs-9"><%= @user.phone_number %></td>
+      </tr>
+      <tr class="row">
+        <th class="col-xs-3">メールアドレス</th>
+        <td class="col-xs-9"><%= @user.email %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<%= link_to "お気に入りリスト", favorite_stretch_path, class: "btn btn-sm btn-success" %>
+<%= link_to "口コミリスト", user_path, class: "btn btn-sm btn-success" %>
+<%= render 'reviews/review_index', reviews: @reviews %>

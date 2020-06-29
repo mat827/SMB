@@ -1,0 +1,27 @@
+<div class='row'>
+  <h2>ストレッチ一覧</h2>
+  <div class='col-xs-offset-10'>
+    <%= link_to new_admins_stretch_path do %>
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+    <% end %>
+  </div>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>ストレッチID</th>
+        <th>ストレッチ名</th>
+        <th>カテゴリー</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @stretchs.each do |stretch| %>
+      <tr>
+        <td><%= stretch.id %></td>
+        <td><%= link_to stretch.name, admins_stretch_path(stretch.id) %></td>
+        <td><%= stretch.category.name %></td>
+      </tr>
+      <% end %>
+      <%= paginate @stretchs %>
+    </tbody>
+  </table>
+</div>
