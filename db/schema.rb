@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(version: 2020_06_26_120333) do
     t.integer "favorite_id"
     t.string "name", null: false
     t.string "image_id", null: false
+    t.datetime "recommended"
     t.text "explanation", null: false
     t.text "action_muscles"
   end

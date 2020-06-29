@@ -8,6 +8,7 @@ class CreateStretches < ActiveRecord::Migration[5.2]
       t.integer :favorite_id, foreign_key: true
       t.string :name, null: false
       t.string :image_id, null: false
+      t.datetime    :recommended
       t.text :explanation, null: false
       t.text :action_muscles
     end

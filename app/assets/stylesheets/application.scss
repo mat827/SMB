@@ -17,18 +17,7 @@
 @import "bootstrap";            /*ここを追加*/
 
 
-@font-face {
-  font-family: 'NotoSansJP-Light';
-  src: font-url('NotoSansJP-Light.otf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'GenJyuuGothic-Normal';
-  src: font-url('GenJyuuGothic-Normal.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 *{
   margin: 0;
@@ -48,6 +37,40 @@ header{
     }
   }
 }
+
+body{
+  min-height: 100vh;
+  min-width: 1024px;
+  position: relative;
+  padding-bottom: 60px;/*←footerの高さ*/
+  box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
+  font-family: 'NotoSansJP-Light';
+  font-size: 1.6rem;
+}
+
+footer{
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background-color:gray;
+  color: #fff;
+  text-align: center;
+  position: absolute;/*←絶対位置*/
+  bottom: 0;/*下に固定*/
+  p {
+    margin: 0;
+  }
+}
+
+
+.wrap {
+     overflow: hidden;
+ }
+
+.table-wrapper, .form-wrapper {
+  overflow: auto;
+}
+
 
 
 
