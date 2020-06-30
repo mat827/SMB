@@ -33,7 +33,7 @@ class ReviewsController < ApplicationController
   end
 
   def index
-    @reviews = Review.includes(:user, :stretch).order(created_at: :desc).page(params[:page])
+    @reviews = Review.includes(:user, :stretch).order(created_at: :desc).page(params[:page]).per(4)
   end
 
   private
