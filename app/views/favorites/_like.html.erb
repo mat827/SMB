@@ -1,0 +1,10 @@
+ <% if @favorite.present? %>
+  <h2>この投稿のお気に入りを解除しますか？
+  <%= link_to "解除する", favorite_path(id: @favorite.id), method: :delete, remote: true, class: "btn btn-danger" %>
+  </h2>
+
+<% else %>
+  <h2>この投稿のお気に入りに登録しますか？
+    <%= link_to "登録をする", favorites_path(stretch_id: @stretch.id), method: :post, remote: true, class:"btn btn-primary like-btn" %>
+  </h2>
+<% end %>
