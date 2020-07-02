@@ -36,6 +36,19 @@ header{
       float: left;
     }
   }
+  #logo{
+    width: 150px;
+    height: 100px;
+    padding-left: 3px;
+    color:#fff;
+  }
+  a {
+    color:#fff;
+    line-height: 60px;
+  }
+  .navbar-inverse {
+    background-color: black;
+  }
 }
 
 
