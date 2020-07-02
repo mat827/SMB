@@ -1,19 +1,21 @@
-<div class='row'>
-  <div id="search-bar">
-  <%= search_form_for @q, url: stretchs_path do |f| %>
-    <%= f.search_field :action_muscles_or_name_cont, class: 'form-control input-lg', placeholder: "ストレッチ名や筋肉名を入力" %>
-    <%= f.submit "検索", class: "btn btn-success btn-lg" %>
-  <% end %>
-  </div>
-  <div class='col-md-3 col-xs-12'>
-    <%= render 'categorys/search',categorys:@categorys %>
-  </div>
-  <div class='col-md-9 col-xs-12'>
-    <h2><%= @title %>一覧</h2>
-  　<p>(全<%= @stretchs.count %>件)</p>
-    <%= render 'stretchs/stretchs_index', stretchs: @stretchs %>
-    <div class='child-center'>
-      <%= paginate @stretchs %>
+<div class='container'>
+  <div class='row'>
+    <div id="search-bar">
+    <%= search_form_for @q, url: stretchs_path do |f| %>
+      <%= f.search_field :action_muscles_or_name_cont, class: 'form-control input-lg', placeholder: "ストレッチ名や筋肉名を入力" %>
+      <%= f.submit "検索", class: "btn btn-success btn-lg" %>
+    <% end %>
+    </div>
+    <div class='col-md-3 col-xs-12'>
+      <%= render 'categorys/search',categorys:@categorys %>
+    </div>
+    <div class='col-md-9 col-xs-12'>
+      <h2><%= @title %>一覧</h2>
+    　<p>(全<%= @stretchs.count %>件)</p>
+      <%= render 'stretchs/stretchs_index', stretchs: @stretchs %>
+      <div class='child-center'>
+        <%= paginate @stretchs %>
+      </div>
     </div>
   </div>
 </div>

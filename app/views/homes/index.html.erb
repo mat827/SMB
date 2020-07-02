@@ -1,5 +1,3 @@
-<div class='row'>
-  <div clss='col-md-9 col-xs-12 col-xs-3'>
 <div class='cover'>
   <div class='cover-inner'>
     <div class='cover-contents'>
@@ -9,8 +7,6 @@
       <% end %>
     </div>
   </div>
-</div>
-</div>
 </div>
 
 <div class='container'>
@@ -23,17 +19,17 @@
         <h4 class='title'>ストレッチをすることで体をメンテナンスし、日々快適なボディを目指していくストレッチサービスです</h4>
       </div>
       <div class='row'>
-        <div class='col-md-4 col-sm-6 feature text-center'>
+        <div class='col-xs-6 col-md-4 col-sm-6 feature text-center'>
           <span aria-hidden='true' class='glyphicon glyphicon-check' style='font-size: 40px'></span>
           <h3 class='feature-title'>リアルな口コミ</h3>
           <p>✔  実際の体験してもらった方々のリアルな口コミであなたに最適なストレッチをサポート</p>
         </div>
-        <div class='col-md-4 col-sm-6 feature text-center'>
+        <div class='col-xs-6 col-md-4 col-sm-6 feature text-center'>
           <span aria-hidden='true' class='glyphicon glyphicon-zoom-in' style='font-size: 40px'></span>
           <h3 class='feature-title'>探しやすい</h3>
           <p>✔  気になるストレッチをお気に入り登録や最新の口コミから検索可能</p>
         </div>
-        <div class='col-md-4 col-sm-6  feature text-center'>
+        <div class='col-xs-6 col-md-4 col-sm-6  feature text-center'>
           <span aria-hidden='true' class='glyphicon glyphicon-thumbs-up' style='font-size: 40px'></span>
           <h3 class='feature-title'>見やすいレイアウト</h3>
           <p>✔  PCやスマートフォンどちらからでも見やすい設計</p>
@@ -42,7 +38,7 @@
     </div>
   </div>
 </div>
-<div class="col-md-6 col-xs-4 col-md-push-3 text-center" id="recommended-items">
+<div class="col-xs-6 col-sm-8 col-md-12 text-center" id="recommended-items">
   <h2>オススメ</h2>
     <%= render 'stretchs/stretchs_index', stretchs: @stretchs %>
     <%= link_to 'もっと見る', stretchs_path %>

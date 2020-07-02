@@ -1,2 +1,9 @@
-<h2>口コミ一覧</h2></h2>
+<div class='container'>
+  <div class='row'>
+    <h2>口コミ一覧</h2>
     <%= render 'reviews/review_index', reviews: @reviews %>
+    <div class='child-center'>
+      <%= paginate @reviews %>
+    </div>
+  </div>
+</div>
