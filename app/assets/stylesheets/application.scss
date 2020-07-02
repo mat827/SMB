@@ -30,12 +30,20 @@ header{
   span {
     line-height: 60px;
   }
+  #name{
+    color:#fff;
+    margin-left: 1.6rem;
+  }
   .navbar-right{
     li{
       margin: 5px;
       float: left;
     }
   }
+}
+
+a{
+  color:#fff;
 }
 
 
@@ -94,6 +102,7 @@ footer{
 .child-center{
   text-align: center;
 }
+
 
 
 

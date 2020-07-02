@@ -3,6 +3,7 @@
     <div class="row posts">
       <div class="col-md-6 mb-3">
         <div class=" review-content">
+          <p><%=review.created_at.strftime("%Y-%m-%d %H:%M") %></p>
           <h4 class="mb-3">評価：<%= review.rate %>点 | <%= review.title %></h4>
 
           <!--星評価-->
@@ -23,6 +24,12 @@
           <p><%= review.content %></p>
           <%= image_tag review.picture.url, class:'img-fluid' if review.picture? %>
         </div>
+        <div class="edit-button">
+          <% if current_user == review.user %>
+            <%= link_to '口コミを編集', edit_review_path(review), method: :get, class:'btn btn-default' %>
+            <%= link_to '口コミを削除', review, method: :delete, class:'btn btn-default' %>
+          <% end %>
+        </div>
       </div>
       <div class="col-md-4">
         <%= link_to review.stretch do %>
@@ -32,11 +39,6 @@
           </div>
         <%end %>
       </div>
-      <div class="col-md-12 edit-button">
-        <% if current_user == review.user %>
-          <%= link_to '口コミを編集', edit_review_path(review), method: :get, class:'btn btn-default' %>
-          <%= link_to '口コミを削除', review, method: :delete, class:'btn btn-default' %>
-        <% end %>
       </div>
     </div>
   <% end %>
