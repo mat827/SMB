@@ -18,13 +18,13 @@
     </div>
       <div class='col-md-12'>
        <div id="likes_buttons_<%= @stretch.id %>">
-          <%= render partial: 'favorites/like', stretch: @stretch, favorite: @favorite %>
+          <%= render partial: 'favorites/like', favorite: @favorite %>
        </div>
       </div>
-      <h2>口コミ一覧</h2></h2>
+      <h2>口コミ一覧</h2>
       <%= render 'reviews/review_index', reviews: @reviews, user: @user %>
       <h2>口コミ投稿する</h2>
       <%= render 'reviews/new_review', review: @review, stretch: @stretch %>
   </div>
 </div>
-</div>
+
