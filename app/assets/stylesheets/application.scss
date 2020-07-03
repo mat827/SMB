@@ -36,10 +36,24 @@ header{
       float: left;
     }
   }
+  #logo{
+    width: 150px;
+    height: 100px;
+    padding-left: 3px;
+    color:#fff;
+  }
+  a {
+    color:#fff;
+    line-height: 60px;
+  }
+  .navbar-inverse {
+    background-color: black;
+  }
 }
 
 
 body{
+  background-color: #f2f2f2;
   min-height: 100vh;
   min-width: 1024px;
   position: relative;
@@ -78,6 +92,7 @@ footer{
 .pagination>li>a {
   border: none;     /*枠線をなくす*/
   color: #696969;   /*文字の色を変える*/
+  background-color: #f2f2f2;
 }
 
 /* 表示しているページ番号のデザイン */
