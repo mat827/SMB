@@ -12,11 +12,22 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <script>
+      $(function(){
+        $(".alert").fadeOut(5000);
+      });
+    </script>
   </head>
 
   <body>
       <div class='body'>
         <%=render 'layouts/header' %>
+        <% if flash[:notice] %>
+          <div class='alert alert-success'>
+            <%= flash[:notice] %>
+          </div>
+        <% end %>
         <%= yield %>
       </div>
       <%= render 'layouts/footer' %>
