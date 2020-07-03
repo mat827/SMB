@@ -5,6 +5,8 @@ class UsersController < ApplicationController
   def show
     @user = current_user
     @reviews = Review.includes(:user, :stretch).where(user_id: @user.id).page(params[:page]).per(4)
+    @favorite = Favorite.where('user_id = ?', @user)
+    @favorites = @user.favorites.page(params[:page]).per(4)
   end
 
   def edit
@@ -30,12 +32,6 @@ class UsersController < ApplicationController
     user.update!(is_valid: '無効')
     reset_session # 情報をリセット
     redirect_to root_path, notice: '退会しました'
-  end
-
-  def favorite_stretch
-    @user = current_user
-    @favorite = Favorite.where('user_id = ?', @user)
-    @favorites = @user.favorites.page(params[:page]).per(4)
   end
 
   private
