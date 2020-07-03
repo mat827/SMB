@@ -10,7 +10,6 @@
 </div>
 
 <div class='container'>
-  <p></p>
   <!-- サービス紹介 -->
   <div class='features'>
     <div class='container'>
@@ -37,12 +36,12 @@
       </div>
     </div>
   </div>
-</div>
-<div class="col-xs-6 col-sm-8 col-md-12 text-center" id="recommended-items">
+  <div class="col-xs-6 col-sm-8 col-md-12 text-center" id="recommended-items">
   <h2>オススメ</h2>
     <%= render 'stretchs/stretchs_index', stretchs: @stretchs %>
     <%= link_to 'もっと見る', stretchs_path %>
     <h2>最新の口コミ</h2>
-    <%= render 'reviews/review_index', reviews: @reviews %> 
+    <%= render 'reviews/review_index', reviews: @reviews %>
+</div>
 </div>
 

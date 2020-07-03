@@ -1,6 +1,6 @@
 <% if reviews.present? %>
   <% reviews.each do |review| %>
-    <div class="row posts">
+    <div class="row reviews">
       <div class="col-md-8 offset-md-2">
         <div class=" review-content">
           <p><%=review.created_at.strftime("%Y-%m-%d %H:%M") %></p>

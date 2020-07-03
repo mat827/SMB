@@ -2,6 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/*reviews*/
+.reviews {
+  background-color: white;
+  margin:10px 0;
+  padding: 10px 0;
+}
+
 .review-content {
   position: relative;
   display: inline-block;
@@ -14,3 +21,4 @@
   border-radius: 15px ;
 
   }
+
