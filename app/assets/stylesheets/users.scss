@@ -1,3 +1,29 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* tab */
+.tab {
+  border-bottom: 3px solid #168402;
+}
+.tab li {
+  color: #333;
+  float: left;
+  margin: 0 10px -1px 0;
+  padding: 10px 20px;
+  border: 1px solid #168402;
+  cursor: pointer;
+  list-style: none;
+  transition: .3s;
+}
+.tab li.active {
+  color: #fff;
+  background: #168402;
+  cursor: auto;
+}
+.area ul {
+  display: none;
+}
+.area ul.show {
+  display: block;
+}

@@ -1,6 +1,6 @@
-<h2><%= "#{@user.family_name} #{@user.first_name}" %>さんの会員詳細</h2>
-<div>
+<div class='container'>
   <div class='row'>
+    <h2><%= "#{@user.family_name} #{@user.first_name}" %>さんの会員詳細</h2>
     <div class="row">
       <span class="col-xs-3">顧客ID</span>
       <span class="col-xs-3"><%= @user.id %></span>
@@ -22,7 +22,7 @@
       <span class="col-xs-3">メールアドレス</span>
       <span class="col-xs-3"><%= @user.email %></span>
     </div>
+    <%= link_to "編集する", edit_admins_user_path(@user),class:"btn btn-info"  %>
   </div>
 </div>
 
-<%= link_to "編集する", edit_admins_user_path(@user),class:"btn btn-info"  %>
