@@ -8,6 +8,7 @@ class StretchsController < ApplicationController
     @q = Stretch.all.ransack(params[:q])
     @stretchs = @q.result(distinct: true).page(params[:page]).per(4)
     @title = 'ストレッチ'
+    @reviews = Review.includes(:user, :stretch)
   end
 
   def show
