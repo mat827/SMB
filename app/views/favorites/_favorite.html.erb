@@ -1,14 +1,10 @@
 <% @favorites.each do |favorite| %>
-  <div class="likes-content">
+  <div class="likes-content" id='likelist'>
     <div>
       <%= link_to stretch_path(favorite.stretch) do %>
       <%= attachment_image_tag favorite.stretch, :image, :fill, 500, 500, fallback: "no_image.png", size: "300x300" %>
       <% end %>
-    </div>
-    <div>
       <%= favorite.stretch.name %>
-    </div>
-    <div>
       <%= favorite.stretch.action_muscles %>
     </div>
   </div>
