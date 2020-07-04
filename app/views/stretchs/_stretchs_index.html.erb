@@ -8,6 +8,10 @@
             <label><%= stretch.name %></label>
           </div>
         <% end %>
+        <span>（口コミ <%=stretch.reviews.count %> 件）</span>
+        <div id="star-rate-<%= stretch.id %>"></div>
+        <%= render 'reviews/read_rate', stretch: stretch %>
+   
       </div>
     </div>
   <% end %>
