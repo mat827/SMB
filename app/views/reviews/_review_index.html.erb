@@ -1,10 +1,10 @@
 <% if reviews.present? %>
   <% reviews.each do |review| %>
-    <div class="row reviews">
+    <div class="row" id="reviews">
       <div class="col-md-8 offset-md-2">
         <div class=" review-content">
           <p><%=review.created_at.strftime("%Y-%m-%d %H:%M") %></p>
-          <h4 class="mb-3">評価：<%= review.rate %>点 | <%= review.title %></h4>
+          <h4 class="col-mb-3">評価：<%= review.rate %>点 | <%= review.title %></h4>
           <!--星評価-->
          <div id="star-rate-<%= review.id %>"></div>
           <script>
@@ -21,7 +21,6 @@
         <!--/星評価-->
 
           <p><%= review.content %></p>
-          <%= image_tag review.picture.url, class:'img-fluid' if review.picture? %>
         </div>
         <div class="edit-button">
         <% if current_user == review.user %>
@@ -36,7 +35,7 @@
             <%= image_tag review.stretch.image_url, :size =>'300x300' %>
             <p><%=  review.stretch.name %></p>
           </div>
-        <%end %>
+        <% end %>
       </div>
     </div>
   <% end %>

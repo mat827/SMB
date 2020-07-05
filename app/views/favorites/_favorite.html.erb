@@ -1,14 +1,29 @@
 <% @favorites.each do |favorite| %>
-  <div class="likes-content" id='likelist'>
-    <div>
-      <%= link_to stretch_path(favorite.stretch) do %>
-      <%= attachment_image_tag favorite.stretch, :image, :fill, 500, 500, fallback: "no_image.png", size: "300x300" %>
-      <% end %>
-      <%= favorite.stretch.name %>
-      <%= favorite.stretch.action_muscles %>
+  <div class="likes-content"  id='favoritestretch_<% favorite.id %>'>
+    <div class='row'>
+      <div class='col-md-6'>
+        <%= link_to stretch_path(favorite.stretch) do %>
+        <%= attachment_image_tag favorite.stretch, :image, :fill, 500, 500, fallback: "no_image.png", size: "300x300" %>
+        <% end %>
+      </div>
+      <div class='col-md-6' >
+        <h2>ストレッチ名：<%= favorite.stretch.name %></h2>
+        <h2>作用する筋肉：<%= favorite.stretch.action_muscles %></h2>
+      </div>
     </div>
+    <script>
+    $(function() {
+      $("#favoritestretch_<% favorite.id%> ").sortable();
+    });
+    </script>
   </div>
+
 <% end %>
 <div class='child-center'>
   <%= paginate @favorites %>
 </div>
+
+
+
+
+
