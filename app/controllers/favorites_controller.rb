@@ -11,7 +11,7 @@ class FavoritesController < ApplicationController
     @stretch = Stretch.find(params[:stretch_id])
     @favorite = Favorite.find(params[:id])
     if @favorite.destroy
-      @favorite = Favorite.find_by(params[:id])
+      @favorite = nil
     end
   end
 end

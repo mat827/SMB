@@ -1,5 +1,5 @@
 <% @favorites.each do |favorite| %>
-  <div class="likes-content"  id='favoritestretch'>
+  <div class="likes-content"  id='favoritestretch_<% favorite.id %>'>
     <div class='row'>
       <div class='col-md-6'>
         <%= link_to stretch_path(favorite.stretch) do %>
@@ -13,7 +13,7 @@
     </div>
     <script>
     $(function() {
-      $("#favoritestretch").sortable();
+      $("#favoritestretch_<% favorite.id%> ").sortable();
     });
     </script>
   </div>

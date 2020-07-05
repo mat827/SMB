@@ -17,9 +17,6 @@ class ContactsController < ApplicationController
     @contact = Contact.find(params[:id])
     @contact.destroy
     redirect_to admins_contacts_path,notice: '質問を削除しました'
-    # respond_to do |format|
-    #   format.html { redirect_to admins_contact_path, notice: 'Contact was successfully destroyed.' }
-    #   format.json { head :no_content }
     end
 
   private
