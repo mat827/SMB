@@ -35,5 +35,6 @@ Rails.application.routes.draw do
     get '/homes' => 'homes#index', as: 'homes'
     get '/search' => 'searches#search', as: 'search'
     resources :contacts
+    
   end
 end

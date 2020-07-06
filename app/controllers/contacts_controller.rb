@@ -1,5 +1,6 @@
 class ContactsController < ApplicationController
-  before_action only: [:new, :show, :edit, :destroy]
+  before_action :authenticate_user!
+  before_action only: [:new, :show, :edit,]
 
   def new
     @contact = Contact.new
@@ -12,12 +13,6 @@ class ContactsController < ApplicationController
       redirect_to stretchs_path,notice: '質問を送信しました'
     end
   end
-
-  def destroy
-    @contact = Contact.find(params[:id])
-    @contact.destroy
-    redirect_to admins_contacts_path,notice: '質問を削除しました'
-    end
 
   private
     # Never trust parameters from the scary internet, only allow the white list through.

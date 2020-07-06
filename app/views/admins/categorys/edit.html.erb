@@ -1,4 +1,9 @@
 <h2>カテゴリ編集</h2>
+<% if flash[:alert] %>
+  <div class="row alert alert-warning">
+    <%= flash[:alert] %>
+  </div>
+<% end %>
 <div class='row'>
   <%= form_for(@category, url:"/admins/categorys/#{@category.id}") do |f| %>
     <div class='col-xs-2'>

@@ -13,9 +13,10 @@ class Admins::StretchsController < ApplicationController
 
   def create
     @stretch = Stretch.new(stretch_params)
-    if @stretch.save!
-      redirect_to admins_stretchs_path
+    if @stretch.save
+      redirect_to admins_stretchs_path,notice: 'ストレッチを追加しました'
     else
+      flash[:alert] = "入力されていない箇所があります"
       render 'new'
     end
   end
