@@ -11,8 +11,9 @@ class Admins::CategorysController < ApplicationController
   def create
     @category = Category.new(category_params)
     if @category.save
-      redirect_to admins_categorys_path
+      redirect_to admins_categorys_path,notice: 'カテゴリを追加しました'
     else
+      flash[:alert] = "入力されていない箇所があります"
       @categorys = Category.all
       render :index
     end
@@ -25,8 +26,9 @@ class Admins::CategorysController < ApplicationController
   def update
     @category = Category.find(params[:id])
     if @category.update(category_params)
-      redirect_to admins_categorys_path
+      redirect_to admins_categorys_path,notice: 'カテゴリを修正しました'
     else
+      flash[:alert] = "入力されていない箇所があります"
       render :edit
     end
   end
