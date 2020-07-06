@@ -1,7 +1,7 @@
 <header>
   <nav class='nav navbar-inverse' >
     <div class='navbar-header'>
-      <%= link_to (root_path) do %>
+      <%= link_to (root_path),data: {"turbolinks" => false} do %>
         <%= image_tag 'logo.jpg', id: "logo" %>
       <% end %>
       <button type="button" class="btn navbar-toggle" data-toggle="collapse" data-target="#top-nav" >
