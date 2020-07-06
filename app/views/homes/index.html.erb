@@ -1,20 +1,26 @@
-<div class='cover'>
-  <div class='cover-inner'>
-    <div class='cover-contents'>
-      <h1>ストレッチで快適な日々を送りたいあなたへ</h1>
-      <% unless signed_in? %>
-        <%=link_to 'SMBを始める', new_user_registration_path, class: 'btn btn-success btn-lg cover-button' %>
-      <% end %>
+<div class="container-image">
+  <!-- スライドショー -->
+  <div class='slider'>
+    <div>
+      <div class='sride-image' id='sride1'><p class='slide'>ストレッチで快適な日々を送りたいあなたへ</p></div>
+    </div>
+    <div>
+      <div class='sride-image' id='sride2'><p class='slide'>体のケアはできていますか？</p></div>
+    </div>
+    <div>
+      <div class='sride-image' id='sride3'><p class='slide'>体の疲れや痛み</p></div>
+    </div>
+    <div>
+      <div class='sride-image' id='sride4'><p class='slide-2'>ストレッチで簡単改善！</p></div>
     </div>
   </div>
 </div>
-
 <div class='container'>
   <!-- サービス紹介 -->
   <div class='features'>
     <div class='container'>
       <div class='section-title text-center'>
-        <h1 class='title'>SMBとは</h1>
+        <h2 class='title'>SMBとは</h2>
         <h4 class='title'>ストレッチをすることで体をメンテナンスし、日々快適なボディを目指していくストレッチサービスです</h4>
       </div>
       <div class='row'>

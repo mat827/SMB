@@ -1,4 +1,3 @@
-
 <% if @favorite.present? %>
   <h2>この投稿のお気に入りを解除しますか？
   <%= link_to "解除する", favorite_path(id: @favorite.id, stretch_id: @stretch.id), method: :delete, remote: true, class: "btn btn-danger" %>

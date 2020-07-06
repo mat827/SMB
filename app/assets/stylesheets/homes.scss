@@ -4,35 +4,60 @@
 
 
 
-.cover {
-  margin-bottom: 20px;
-  width: 100%;
-  height: auto;
-  background: url(stretch4.jpeg) center center no-repeat;
+/* スライド */
+#sride1 {
+  margin: auto;
+  height: 800px;
+  max-width: 100%;
+  background-image: url(stretch4.jpeg);
   background-size: cover;
-  .cover-inner {
-    height: 100%;
-    margin: auto;
-    display: table;
-    .cover-contents {
-      display: table-cell;
-      vertical-align: middle;
-      text-align: center;
-      position: relative;
-      h1 {
-        margin: 0 0 60px 0;
-        padding: 3em 0;
-        color: white;
-        font-weight: bold;
-        letter-spacing: 0.15em;
-        font-size: 6vw;
-        text-shadow: black 1px 1px 0px, black -1px 1px 0px,
-                   black 1px -1px 0px, black -1px -1px 0px;
-      }
-      a {
-      margin: 0 0 60px 0;
-
-      }
-    }
+  text-align:center;
   }
+
+#sride2 {
+  margin: auto;
+  height: 800px;
+  max-width: 100%;
+  background-image: url(stretch6.jpeg);
+  background-size: cover;
+  text-align:center;
+  }
+
+#sride3 {
+  margin: auto;
+  height: 800px;
+  max-width: 100%;
+  background-image: url(stretch1.jpeg);
+  background-size: cover;
+  }
+
+#sride4 {
+  margin: auto;
+  height: 800px;
+  max-width: 100%;
+  background-image: url(stretch9.jpeg);
+  background-size: cover;
+  }
+
+
+
+.slide{
+  margin: 0 0 60px 0;
+  padding: 2.5em 0;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+  font-size: 7.5vw;
+  text-shadow: black 8px 6px 7px;
 }
+
+.slide-2{
+  margin: 0 0 60px 0;
+    padding: 3em 0;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+    font-size: 7vw;
+    text-shadow: black 8px 6px 7px;
+}
+
