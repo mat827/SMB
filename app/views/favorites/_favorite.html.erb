@@ -2,7 +2,7 @@
   <div class="likes-content"  id='favoritestretch_<% favorite.id %>'>
     <div class='row'>
       <div class='col-md-6'>
-        <%= link_to stretch_path(favorite.stretch) do %>
+        <%= link_to stretch_path(favorite.stretch),data: {"turbolinks" => false} do %>
         <%= attachment_image_tag favorite.stretch, :image, :fill, 500, 500, fallback: "no_image.png", size: "300x300" %>
         <% end %>
       </div>
