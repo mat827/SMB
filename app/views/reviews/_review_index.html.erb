@@ -30,7 +30,7 @@
       </div>
       </div>
       <div class="col-md-4">
-        <%= link_to review.stretch do %>
+        <%= link_to review.stretch,data: {"turbolinks" => false} do %>
           <div class="reviews-stretch">
             <%= image_tag review.stretch.image_url, :size =>'300x300' %>
             <p><%=  review.stretch.name %></p>
