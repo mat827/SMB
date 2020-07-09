@@ -73,6 +73,7 @@ gem 'refile', require: 'refile/rails', github: 'manfe/refile'
 gem 'refile-mini_magick'
 gem 'rubocop-airbnb'
 gem 'pry-byebug'
+gem 'acts_as_list'
 
 
 gem 'dotenv-rails'

@@ -16,7 +16,7 @@ class User < ApplicationRecord
   validates :is_valid, presence: true
 
   # お気に入り機能と関連付け
-  has_many :favorites
+  has_many :favorites, -> { order(position: :asc) }
   has_many :stretchs, dependent: :destroy
 
   # 口コミ投稿との関連付け
