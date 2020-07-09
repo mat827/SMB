@@ -5,30 +5,38 @@
 
 #image1 {
   margin-left: 80px;
-  height: 400px;
-  width: 40%;
-  background-image: image-url( "stretch2.jpeg");
+  margin-top: 50px;
+  height: 600px;
+  width: 600px;
+  background-image: image-url("image1.jpeg");
   background-size: cover;
+  background-position: center;
   }
 
 
 #image2 {
-  height: 400px;
-  background-image: image-url("stretch1.jpeg");
+  margin-right: 80px;
+  margin-top: 50px;
+  height: 600px;
+  width: 600px;
+  background-image: image-url("image3.jpeg");
   background-size: cover;
-  padding: 0;
+  background-position: center;
   }
 
 #image4 {
   margin-left: 80px;
-  height: 400px;
-  width: 40%;
+  height: 600px;
+  margin-top: 50px;
+  width: 600px;
   background-image: image-url("stretch4.jpeg");
   background-size: cover;
+  background-position: center;
 }
 
 .content1 {
   margin-top: 150px;
+  font-size:24px;
 }
 
 .content2 {
@@ -46,9 +54,10 @@
 
 
 #image3 {
-  height: 250px;
+  height: 350px;
   width: 40%;
-  background-image: image-url("stretch1.jpeg");
+  background-image: image-url("image2.jpeg");
+  background-position: center;
   background-size: cover;
   padding: 0;
   border-radius: 50%;

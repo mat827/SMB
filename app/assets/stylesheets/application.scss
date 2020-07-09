@@ -51,6 +51,11 @@ header{
   }
 }
 
+.form-inline .form-control {
+    display: inline-block;
+    width: 80%;
+}
+
 h2, h3{
   font-size:32px;
   font-weight: 600;
