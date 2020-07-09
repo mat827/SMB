@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2020_06_26_120333) do
   create_table "favorites", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "stretch_id", null: false
+    t.integer "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["stretch_id"], name: "index_favorites_on_stretch_id"

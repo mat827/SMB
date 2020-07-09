@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   patch 'users/:id/edit' => 'users#update', as: 'update'
   get 'users/:id/edit_withdraw' => 'users#edit_withdraw', as: 'edit_user_withdraw'
   put 'users/withdraw' => 'users#withdraw', as: 'user_withdraw'
+  patch 'users/:id/sort', to: 'users#sort'
 
   get 'category/:id' => 'categorys#search', as: 'categorys_search'
 
