@@ -44,30 +44,6 @@
     });
 </script>
 
-<!-- <script>
-  $(function() {
-      var el, sortable;
-      el = document.getElementById("sortable_list");
-      token = $('meta[name="csrf-token"]').attr('content');
-      if (el !== null) {
-        return sortable = Sortable.create(el, {
-          delay: 200,
-          onUpdate: function(evt) {
-            return $.ajax({
-              url: '/users/' + $("#user_id").val() + '/sort',
-              type: 'patch',
-              data: {
-                from: evt.oldIndex,
-                to: evt.newIndex
-              }
-            });
-          }
-        });
-      }
-    });
-</script> -->
-
-
 
 
 

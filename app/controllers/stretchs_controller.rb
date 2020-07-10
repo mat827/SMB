@@ -6,7 +6,7 @@ class StretchsController < ApplicationController
     # is_validがマッチするレコードを全て取得
     @categorys = Category.where(is_valid: true)
     @q = Stretch.all.ransack(params[:q])
-    @stretchs = @q.result(distinct: true).page(params[:page]).per(4)
+    @stretchs = @q.result(distinct: true).page(params[:page]).per(8)
     @title = 'ストレッチ'
     @reviews = Review.includes(:user, :stretch)
   end
