@@ -2,12 +2,15 @@
   <% stretchs.each do |stretch| %>
     <div class='col-md-3 col-xs-12'>
       <div class='thumbnail'>
-        <%= link_to stretch_path(stretch) do %>
+        <%= link_to stretch_path(stretch),data: {"turbolinks" => false} do %>
           <%= attachment_image_tag stretch, :image, :fill, 300, 300 %>
           <div class='caption'>
             <label><%= stretch.name %></label>
           </div>
         <% end %>
+        <span>（口コミ <%=stretch.reviews.count %> 件）</span>
+        <div id="star-rate-<%= stretch.id %>"></div>
+        <%= render 'reviews/read_rate', stretch: stretch %>
       </div>
     </div>
   <% end %>

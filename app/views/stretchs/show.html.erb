@@ -6,25 +6,24 @@
     <div class='col-md-9 col-xs-12'>
       <div id='stretch-show-content'>
         <div class='thumbnail'>
-          <%= attachment_image_tag @stretch, :image, :fill, 500, 500, fallback: "no_image.png", size: "500x500" %>
+          <%= link_to @stretch.image_url, 'data-lightbox': 'stretchimage' do %>
+            <%= attachment_image_tag @stretch, :image, :fill, 500, 500, fallback: "no_image.png", size: "500x500" %>
+          <% end %>
         </div>
       </div>
-      <div class='col-md-12'>
+      <div class='stretch-text'>
         <h2>ストレッチ名：<%= @stretch.name %></h2>
         <h2>作用する筋肉：<%= @stretch.action_muscles %></h2>
         <h2>ストレッチ説明：<%= @stretch.explanation %></h2>
-        <h2></h2>
+        <div id="likes_buttons_<%= @stretch.id %>">
+          <%= render partial: 'favorites/like', favorite: @favorite %>
+        </div>
       </div>
     </div>
-      <div class='col-md-12'>
-       <div id="likes_buttons_<%= @stretch.id %>">
-          <%= render partial: 'favorites/like', favorite: @favorite %>
-       </div>
-      </div>
-      <h2>口コミ一覧</h2>
-      <%= render 'reviews/review_index', reviews: @reviews, user: @user %>
-      <h2>口コミ投稿する</h2>
-      <%= render 'reviews/new_review', review: @review, stretch: @stretch %>
+    <h2>口コミ一覧</h2>
+    <%= render 'reviews/review_index', reviews: @reviews, user: @user %>
+    <h2>口コミ投稿する</h2>
+    <%= render 'reviews/new_review', review: @review, stretch: @stretch %>
   </div>
 </div>
 

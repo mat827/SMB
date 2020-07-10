@@ -27,9 +27,20 @@
         </tbody>
       </table>
     </div>
-    <%= link_to "お気に入りリスト", favorite_stretch_path, class: "btn btn-sm btn-success" %>
-    <%= link_to "口コミリスト", user_path, class: "btn btn-sm btn-success" %>
-    <%= render 'reviews/review_index', reviews: @reviews %>
+    <!-- タブメニューactiveクラスに、クリック済のデザインを設定したcssを指定 -->
+    <ul class="tab clearfix">
+     <li class="active">口コミリスト</li>
+     <li>お気に入りリスト</li>
+    </ul>
+    <!-- コンテンツ全体を非表示にし、showクラスが付いたコンテンツのみ表示 -->
+    <div class="area">
+      <ul class="show">
+        <li><%= render 'reviews/review_index', reviews: @reviews %></li>
+      </ul>
+      <ul>
+        <li><%= render 'favorites/favorite', favorites: @favorites %></li>
+      </ul>
+    </div>
     <div class='child-center'>
       <%= paginate @reviews %>
     </div>

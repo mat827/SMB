@@ -1,7 +1,7 @@
 <header>
   <nav class='nav navbar-inverse' >
     <div class='navbar-header'>
-      <%= link_to (root_path) do %>
+      <%= link_to (root_path),data: {"turbolinks" => false} do %>
         <%= image_tag 'logo.jpg', id: "logo" %>
       <% end %>
       <button type="button" class="btn navbar-toggle" data-toggle="collapse" data-target="#top-nav" >
@@ -15,7 +15,7 @@
       <ul class='nav navbvar-nav navbar-right'>
         <% if user_signed_in? %>
           <li>
-            <%= link_to user_path(current_user) do %>
+            <%= link_to user_path(current_user), data: {"turbolinks" => false} do %>
               <i class='glyphicon glyphicon-user'>マイページ</i>
             <% end %>
           </li>
@@ -26,17 +26,17 @@
           </li>
           <li>
             <%= link_to stretchs_path do %>
-              <i class="">ストレッチ一覧</i>
+              <i class="glyphicon glyphicon-list-alt" aria-hidden="true">ストレッチ一覧</i>
             <% end %>
           </li>
           <li>
             <%= link_to reviews_path do %>
-              <i class="">口コミ一覧</i>
+              <i class="glyphicon glyphicon-comment" aria-hidden="true">口コミ一覧</i>
             <% end %>
           </li>
           <li>
             <%= link_to new_contact_path do %>
-              <i class="">質問</i>
+              <i class="glyphicon glyphicon-envelope" aria-hidden="true">質問</i>
             <% end %>
           </li>
           <li>

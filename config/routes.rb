@@ -2,7 +2,7 @@
 
 Rails.application.routes.draw do
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
-  
+
   devise_for :admins, skip: :all # スキップして以下のルーティングのみ機能（devise_scope)
   devise_scope :admin do
     get 'admins/sign_in' => 'admins/sessions#new', as: 'new_admin_session'
@@ -16,10 +16,10 @@ Rails.application.routes.draw do
   resources :stretchs, only: %i[index show]
 
   resources :users, only: %i[show edit]
-  get 'users/:id/favorite_stretch' => 'users#favorite_stretch', as: 'favorite_stretch'
   patch 'users/:id/edit' => 'users#update', as: 'update'
   get 'users/:id/edit_withdraw' => 'users#edit_withdraw', as: 'edit_user_withdraw'
   put 'users/withdraw' => 'users#withdraw', as: 'user_withdraw'
+  patch 'users/:id/sort', to: 'users#sort'
 
   get 'category/:id' => 'categorys#search', as: 'categorys_search'
 
@@ -36,5 +36,6 @@ Rails.application.routes.draw do
     get '/homes' => 'homes#index', as: 'homes'
     get '/search' => 'searches#search', as: 'search'
     resources :contacts
+    
   end
 end

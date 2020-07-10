@@ -1,7 +1,7 @@
 <div class='container'>
   <div class='row'>
-    <div id="search-bar">
-    <%= search_form_for @q, url: stretchs_path do |f| %>
+    <div class= serch.id>
+    <%= search_form_for @q, class:'form-inline' ,url: stretchs_path do |f| %>
       <%= f.search_field :action_muscles_or_name_cont, class: 'form-control input-lg', placeholder: "ストレッチ名や筋肉名を入力" %>
       <%= f.submit "検索", class: "btn btn-success btn-lg" %>
     <% end %>

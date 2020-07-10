@@ -51,8 +51,20 @@ header{
   }
 }
 
+.form-inline .form-control {
+    display: inline-block;
+    width: 80%;
+}
+
+h2, h3{
+  font-size:32px;
+  font-weight: 600;
+}
+
+
 
 body{
+  background-color: #f2f2f2;
   min-height: 100vh;
   min-width: 1024px;
   position: relative;
@@ -77,10 +89,6 @@ footer{
 }
 
 
-.wrap {
-     overflow: hidden;
- }
-
 .table-wrapper, .form-wrapper {
   overflow: auto;
 }
@@ -91,6 +99,7 @@ footer{
 .pagination>li>a {
   border: none;     /*枠線をなくす*/
   color: #696969;   /*文字の色を変える*/
+  background-color: #f2f2f2;
 }
 
 /* 表示しているページ番号のデザイン */
@@ -104,8 +113,37 @@ footer{
   border-radius: 15px;    /*角を丸くする*/
 }
 
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
+    z-index: 3;
+    color: #fff;
+    background-color: #8BC34A;
+    border-color: #8BC34A;
+    cursor: default;
+}
+
+
 .child-center{
   text-align: center;
+}
+
+
+.admin-text{
+  border-bottom: inset 5px #bfbee0;
+  width: 200px;
+}
+
+
+#back {
+  position: fixed;
+  right: 20px;
+  bottom: 60px;
+}
+
+
+@media screen and (max-width: 670px) {
+.navbar{
+width: 100%;
+}
 }
 
 

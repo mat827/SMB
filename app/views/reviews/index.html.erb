@@ -2,8 +2,8 @@
   <div class='row'>
     <h2>口コミ一覧</h2>
     <%= render 'reviews/review_index', reviews: @reviews %>
-    <div class='child-center'>
-      <%= paginate @reviews %>
-    </div>
   </div>
+</div>
+<div class='child-center'>
+  <%= paginate @reviews %>
 </div>

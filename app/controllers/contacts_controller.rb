@@ -1,5 +1,6 @@
 class ContactsController < ApplicationController
-  before_action only: [:new, :show, :edit, :destroy]
+  before_action :authenticate_user!
+  before_action only: [:new, :show, :edit,]
 
   def new
     @contact = Contact.new
@@ -9,18 +10,9 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     if @contact.save
       ContactMailer.contact_mail(@contact).deliver
-      redirect_to stretchs_path,notice: 'Contact was successfully created.'
+      redirect_to stretchs_path,notice: '質問を送信しました'
     end
   end
-
-  def destroy
-    @contact = Contact.find(params[:id])
-    @contact.destroy
-    redirect_to admins_contacts_path
-    # respond_to do |format|
-    #   format.html { redirect_to admins_contact_path, notice: 'Contact was successfully destroyed.' }
-    #   format.json { head :no_content }
-    end
 
   private
     # Never trust parameters from the scary internet, only allow the white list through.

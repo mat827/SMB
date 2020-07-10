@@ -1,10 +1,11 @@
 # frozen_string_literal: true
-
 class UsersController < ApplicationController
   before_action :authenticate_user!
   def show
     @user = current_user
-    @reviews = Review.includes(:user, :stretch).where(user_id: @user.id).page(params[:page]).per(4)
+    @reviews = Review.includes(:user, :stretch).where(user_id: @user.id).page(params[:page])
+    @favorite = Favorite.where('user_id = ?', @user)
+    @favorites = @user.favorites.page(params[:page])
   end
 
   def edit
@@ -32,11 +33,14 @@ class UsersController < ApplicationController
     redirect_to root_path, notice: '退会しました'
   end
 
-  def favorite_stretch
+  def sort
     @user = current_user
-    @favorite = Favorite.where('user_id = ?', @user)
-    @favorites = @user.favorites.page(params[:page]).per(4)
+    #favorite = @user.favorites(params[:from].to_i)
+    favorite = @user.favorites.find_by(position: params[:from].to_i + 1)
+    favorite.insert_at(params[:to].to_i + 1)
+    head :ok
   end
+
 
   private
 

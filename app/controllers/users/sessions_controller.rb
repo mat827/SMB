@@ -31,11 +31,11 @@ class Users::SessionsController < Devise::SessionsController
     if @user
       if @user.valid_password?(params[:user][:password]) &&
          (@user.active_for_authentication? == false)
-        flash[:error] = '退会済みです。'
+        flash[:notice] = '退会済みです。'
         redirect_to new_user_session_path
       end
     else
-      flash[:error] = '必須項目を入力してください。'
+      flash[:notice] = '必須項目を入力してください。'
     end
   end
 end
