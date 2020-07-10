@@ -3,9 +3,9 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
   def show
     @user = current_user
-    @reviews = Review.includes(:user, :stretch).where(user_id: @user.id).page(params[:page]).per(4)
+    @reviews = Review.includes(:user, :stretch).where(user_id: @user.id).page(params[:page])
     @favorite = Favorite.where('user_id = ?', @user)
-    @favorites = @user.favorites.page(params[:page]).per(4)
+    @favorites = @user.favorites.page(params[:page])
   end
 
   def edit
