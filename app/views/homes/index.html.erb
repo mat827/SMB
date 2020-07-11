@@ -36,18 +36,23 @@
         </div>
         <div class='col-xs-6 col-md-4 col-sm-6  feature text-center'>
           <span aria-hidden='true' class='glyphicon glyphicon-thumbs-up' style='font-size: 40px'></span>
-          <h3 class='feature-title'>見やすいレイアウト</h3>
-          <p>✔  PCやスマートフォンどちらからでも見やすい設計</p>
+          <h3 class='feature-title'>見やすい</h3>
+          <p>✔  分かりやすい説明や画像、自分だけのお気に入りリストを作成</p>
         </div>
       </div>
     </div>
   </div>
   <div class="col-xs-6 col-sm-8 col-md-12 text-center" id="recommended-items">
-  <h2>オススメ</h2>
+    <h2>おすすめストレッチ</h2>
     <%= render 'stretchs/stretchs_index', stretchs: @stretchs %>
-    <%= link_to 'もっと見る', stretchs_path %>
+    <div class='action'>
+      <%= link_to 'もっと見る', stretchs_path, class: "btn btn-sm btn-success"%>
+    </div>
     <h2>最新の口コミ</h2>
     <%= render 'reviews/review_index', reviews: @reviews %>
-</div>
+    <div class='action'>
+      <%= link_to 'もっと見る', reviews_path, class: "btn btn-sm btn-success" %>
+    </div>
+  </div>
 </div>
 

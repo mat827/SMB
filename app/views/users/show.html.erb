@@ -2,8 +2,10 @@
   <div class="row">
     <h2><i class="fa fa-address-card"></i>マイページ</h2>
     <h3><i class="fa fa-address-book"></i>登録情報</h3>
-    <%= link_to "編集する", edit_user_path, class: "btn btn-sm btn-success" %>
-    <%= link_to "パスワードを変更する", edit_user_registration_path, class: "btn btn-sm btn-success" %>
+    <div class='action'>
+      <%= link_to "編集する", edit_user_path, class: "btn btn-sm btn-success" %>
+      <%= link_to "パスワードを変更する", edit_user_registration_path, class: "btn btn-sm btn-success" %>
+    </div>
 
     <div class="table-wrapper">
       <table class="table table-bordered">

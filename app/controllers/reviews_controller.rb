@@ -11,7 +11,8 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to stretchs_path,notice:'口コミを登録しました'
     else
-      render 'stretchs/show',notice:'口コミを登録済みです'
+      flash[:alert] = '既に投稿されています'
+      render 'stretchs/show'
     end
   end
 
