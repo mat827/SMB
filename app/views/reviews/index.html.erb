@@ -1,6 +1,7 @@
 <div class='container'>
   <div class='row'>
     <h2>口コミ一覧</h2>
+    <p>(全<%= @reviews.count %>件)</p>
     <%= render 'reviews/review_index', reviews: @reviews %>
   </div>
 </div>
