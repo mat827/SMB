@@ -5,7 +5,7 @@ $(function(){
      // 自動再生。trueで自動再生される。
     autoplay: true,
     // 自動再生で切り替えをする時間
-    autoplaySpeed: 2000,
+    autoplaySpeed: 1000,
     // 画像下のドット（ページ送り）を表示
     dots: true,
     fade: true,

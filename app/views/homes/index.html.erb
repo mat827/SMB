@@ -19,11 +19,11 @@
   <!-- サービス紹介 -->
   <div class='features'>
     <div class='container'>
-      <div class='section-title text-center'>
+      <div class='section-title text-center inview fadeIn_up'>
         <h2 class='title'>SMBとは</h2>
         <h4 class='title'>ストレッチをすることで体をメンテナンスし、日々快適なボディを目指していくストレッチサービスです</h4>
       </div>
-      <div class='row'>
+      <div class='row inview fadeIn_up'>
         <div class='col-xs-6 col-md-4 col-sm-6 feature text-center'>
           <span aria-hidden='true' class='glyphicon glyphicon-check' style='font-size: 40px'></span>
           <h3 class='feature-title'>リアルな口コミ</h3>
@@ -43,16 +43,30 @@
     </div>
   </div>
   <div class="col-xs-6 col-sm-8 col-md-12 text-center" id="recommended-items">
-    <h2>おすすめストレッチ</h2>
-    <%= render 'stretchs/stretchs_index', stretchs: @stretchs %>
+    <h2 class='recommended inview fadeIn_up'>おすすめストレッチ</h2>
+    <div class='inview fadeIn_up'>
+      <%= render 'stretchs/stretchs_index', stretchs: @stretchs %>
+    </div>
     <div class='action'>
       <%= link_to 'もっと見る', stretchs_path, class: "btn btn-sm btn-success"%>
     </div>
-    <h2>最新の口コミ</h2>
-    <%= render 'reviews/review_index', reviews: @reviews %>
+    <h2 class='inview fadeIn_up'>最新の口コミ</h2>
+    <div class='inview fadeIn_up'>
+      <%= render 'reviews/review_index', reviews: @reviews %>
+    </div>
     <div class='action'>
       <%= link_to 'もっと見る', reviews_path, class: "btn btn-sm btn-success" %>
     </div>
   </div>
 </div>
 
+<!-- スクロールアニメーション -->
+<script>
+  $(function(){
+  $(".inview").on("inview", function (event, isInView) {
+    if (isInView) {
+      $(this).stop().addClass("is-show");
+    }
+  });
+});
+</script>
