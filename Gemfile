@@ -65,7 +65,7 @@ end
 gem 'tzinfo-data', platforms: %i(mingw mswin x64_mingw jruby)
 # 追記
 gem 'acts_as_list'
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-sass', '~> 3.4.1'
 gem 'devise'
 gem 'jquery-rails'
 gem 'kaminari', '~> 1.2.1'
