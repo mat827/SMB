@@ -19,7 +19,7 @@
               <%=user.id %>
             </td>
             <td>
-              <%= link_to "#{user.family_name} #{user.first_name}", admins_user_path(user) %>
+              <%= link_to "#{user.family_name} #{user.first_name}", admins_user_path(user),data: {"turbolinks" => false} %>
             </td>
             <td>
               <%= user.email %>

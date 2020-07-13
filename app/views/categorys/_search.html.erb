@@ -3,7 +3,7 @@
   <ul class='list-grooup'>
     <% @categorys.each do |category| %>
       <li class='list-group-item'>
-        <%= link_to category.name, categorys_search_path(category) %>
+        <%= link_to category.name, categorys_search_path(category),data: {"turbolinks" => false} %>
       </li>
     <% end %>
   </ul>

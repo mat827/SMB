@@ -48,14 +48,14 @@
       <%= render 'stretchs/stretchs_index', stretchs: @stretchs %>
     </div>
     <div class='action'>
-      <%= link_to 'もっと見る', stretchs_path, class: "btn btn-sm btn-success"%>
+      <%= link_to 'もっと見る', stretchs_path, class: "btn btn-sm btn-success",data: {"turbolinks" => false} %>
     </div>
     <h2 class='inview fadeIn_up'>最新の口コミ</h2>
     <div class='inview fadeIn_up'>
       <%= render 'reviews/review_index', reviews: @reviews %>
     </div>
     <div class='action'>
-      <%= link_to 'もっと見る', reviews_path, class: "btn btn-sm btn-success" %>
+      <%= link_to 'もっと見る', reviews_path, class: "btn btn-sm btn-success",data: {"turbolinks" => false} %>
     </div>
   </div>
 </div>

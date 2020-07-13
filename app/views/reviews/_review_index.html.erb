@@ -5,7 +5,7 @@
         <div class=" review-content">
           <p><%=review.created_at.strftime("%Y-%m-%d %H:%M") %></p>
           <h4 class="col-mb-3">評価：<%= review.rate %>点 | <%= review.title %></h4>
-          <!--星評価-->
+          <!--　レビュー　-->
          <div id="star-rate-<%= review.id %>"></div>
           <script>
           $('#star-rate-<%= review.id %>').raty({
@@ -18,7 +18,6 @@
             score: <%= review.rate %>,
           });
           </script>
-        <!--/星評価-->
 
           <p><%= review.content %></p>
         </div>

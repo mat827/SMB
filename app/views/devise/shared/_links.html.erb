@@ -1,15 +1,15 @@
 <%- if controller_name != 'sessions' %>
-  <%= link_to "こちら", new_session_path(resource_name) %>からログインください<br />
+  <%= link_to "こちら", new_session_path(resource_name),data: {"turbolinks" => false} %>からログインください<br />
 <% end %>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
   <h4><i class="glyphicon glyphicon-hand-right"></i>
 登録がお済みでない方</h4>
-  <%= link_to "こちら", new_registration_path(resource_name) %>から新規登録を行ってください。<br />
+  <%= link_to "こちら", new_registration_path(resource_name),data: {"turbolinks" => false} %>から新規登録を行ってください。<br />
 <% end %>
 
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-  <%= link_to "=>パスワードを忘れた方はこちら", new_password_path(resource_name) %><br />
+  <%= link_to "=>パスワードを忘れた方はこちら", new_password_path(resource_name),data: {"turbolinks" => false} %><br />
 <% end %>
 
 <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
