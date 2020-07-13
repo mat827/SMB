@@ -25,14 +25,14 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [
-                                        # サインアップした際に受け取るストロングパラメーター
-                                        :family_name,
-                                        :first_name,
-                                        :family_name_yomi,
-                                        :first_name_yomi,
-                                        :phone_number,
-                                        :email
-                                      ])
-    devise_parameter_sanitizer.permit(:sign_in, keys: %i[email password])
+      # サインアップした際に受け取るストロングパラメーター
+      :family_name,
+      :first_name,
+      :family_name_yomi,
+      :first_name_yomi,
+      :phone_number,
+      :email,
+    ])
+    devise_parameter_sanitizer.permit(:sign_in, keys: %i(email password))
   end
 end

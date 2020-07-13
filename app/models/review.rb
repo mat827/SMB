@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Review < ApplicationRecord
-   # ユーザーとの関連付け
+  # ユーザーとの関連付け
   belongs_to :user
 
   # ストレッチとの関連付け
@@ -15,7 +15,7 @@ class Review < ApplicationRecord
   validates :rate, numericality: {
     # only_integer: true,
     less_than_or_equal_to: 5,
-    greater_than_or_equal_to: 1
+    greater_than_or_equal_to: 1,
   }
   # validates :content, presence: true
   validates :content, length: { maximum: 300 }
