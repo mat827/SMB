@@ -41,6 +41,14 @@ class Admins::StretchsController < ApplicationController
   private
 
   def stretch_params
-    params.require(:stretch).permit(:category_id, :favorite_id, :name, :image, :explanation, :action_muscles, :recommended)
+    params.require(:stretch).permit(
+      :category_id,
+      :favorite_id,
+      :name,
+      :image,
+      :explanation,
+      :action_muscles,
+      :recommended
+    )
   end
 end

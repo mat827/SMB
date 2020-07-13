@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
       admins_homes_path
     when User
       stretchs_path
-   end
+    end
   end
 
   def after_sign_out_path_for(_resource)
