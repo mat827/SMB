@@ -18,7 +18,7 @@
         <% @stretchs.each do |stretch| %>
         <tr>
           <td><%= stretch.id %></td>
-          <td><%= link_to stretch.name, admins_stretch_path(stretch.id) %></td>
+          <td><%= link_to stretch.name, admins_stretch_path(stretch.id),data: {"turbolinks" => false} %></td>
           <td><%= stretch.category.name %></td>
         </tr>
         <% end %>

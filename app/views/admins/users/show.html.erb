@@ -22,7 +22,7 @@
       <span class="col-xs-3">メールアドレス</span>
       <span class="col-xs-3"><%= @user.email %></span>
     </div>
-    <%= link_to "編集する", edit_admins_user_path(@user),class:"btn btn-info"  %>
+    <%= link_to "編集する", edit_admins_user_path(@user),class:"btn btn-info",data: {"turbolinks" => false} %>
   </div>
 </div>
 
