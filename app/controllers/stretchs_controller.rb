@@ -19,5 +19,4 @@ class StretchsController < ApplicationController
     @favorite = current_user.favorites.find_by(stretch_id: @stretch.id)
     @favorites = @stretch.favorite_users
   end
-
 end

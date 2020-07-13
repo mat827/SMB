@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ReviewsController < ApplicationController
   before_action :authenticate_user!
   def new
@@ -9,7 +11,7 @@ class ReviewsController < ApplicationController
     @stretch = Stretch.find(params[:review][:stretch_id])
     @review = current_user.reviews.build(review_params)
     if @review.save
-      redirect_to stretchs_path,notice:'口コミを登録しました'
+      redirect_to stretchs_path, notice: '口コミを登録しました'
     else
       flash[:alert] = '既に投稿されています'
       render 'stretchs/show'
@@ -18,7 +20,7 @@ class ReviewsController < ApplicationController
 
   def destroy
     review = current_user.reviews.find_by(id: params[:id]).destroy
-    redirect_to stretch_path(review.stretch.id),notice:'口コミを削除しました'
+    redirect_to stretch_path(review.stretch.id), notice: '口コミを削除しました'
   end
 
   def edit

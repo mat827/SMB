@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class UsersController < ApplicationController
   before_action :authenticate_user!
   def show
@@ -35,12 +36,11 @@ class UsersController < ApplicationController
 
   def sort
     @user = current_user
-    #favorite = @user.favorites(params[:from].to_i)
+    # favorite = @user.favorites(params[:from].to_i)
     favorite = @user.favorites.find_by(position: params[:from].to_i + 1)
     favorite.insert_at(params[:to].to_i + 1)
     head :ok
   end
-
 
   private
 
