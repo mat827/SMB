@@ -1,12 +1,15 @@
 <!-- レビュー平均 -->
 <script>
+  // 繰り返し処理でもidをidを一意にできるようにstretch_idを入れる
   $('#star-rate-<%= stretch.id %>').raty({
     size: 36,
     starOff:  '<%= asset_path('star-off.png') %>',
     starOn : '<%= asset_path('star-on.png') %>',
     starHalf: '<%= asset_path('star-half.png') %>',
     half: true,
+    // 読み込みだけで入力できない
     readOnly: true,
+    // 星の入力値を読み込み(平均値)
     score: <%= stretch.reviews.average(:rate).to_f.round(1) %>,
   });
 </script>
