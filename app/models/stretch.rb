@@ -16,9 +16,9 @@ class Stretch < ApplicationRecord
   # 口コミ投稿との関連付け
   has_many :reviews, dependent: :destroy
 
-  def self.search(str)
+  # 管理者側(検索)
+  def self.search(str) # self.でクラスメソッドとしている
     return all unless str
-
-    where(['name LIKE ?', "%#{str}%"])
+    where(['name LIKE ?', "%#{str}%"]) # nameカラムで部分検索
   end
 end

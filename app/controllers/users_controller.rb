@@ -36,9 +36,10 @@ class UsersController < ApplicationController
 
   def sort
     @user = current_user
-    # favorite = @user.favorites(params[:from].to_i)
     favorite = @user.favorites.find_by(position: params[:from].to_i + 1)
+    # ポジションカラムを指定してドラッグの前の位置を取得
     favorite.insert_at(params[:to].to_i + 1)
+    # 新しいポジションを更新する
     head :ok
   end
 

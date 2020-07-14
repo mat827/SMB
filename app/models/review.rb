@@ -7,9 +7,6 @@ class Review < ApplicationRecord
   # ストレッチとの関連付け
   belongs_to :stretch
 
-  # ページネーションの表示件数追加
-  paginates_per 10
-
   validates :title, presence: true, length: { maximum: 50 }
   validates :rate, presence: true
   validates :rate, numericality: {

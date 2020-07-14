@@ -5,6 +5,7 @@ class StretchsController < ApplicationController
   def index
     # is_validがマッチするレコードを全て取得
     @categorys = Category.where(is_valid: true)
+    # 検索機能(検索ワードをparams[:q]で受け取り＠stretchsに入れる)
     @q = Stretch.all.ransack(params[:q])
     @stretchs = @q.result(distinct: true).page(params[:page])
     @title = 'ストレッチ'
