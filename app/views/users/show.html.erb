@@ -3,8 +3,8 @@
     <h2><i class="fa fa-address-card"></i>マイページ</h2>
     <h3><i class="fa fa-address-book"></i>登録情報</h3>
     <div class='action'>
-      <%= link_to "編集する", edit_user_path, class: "btn btn-sm btn-success" %>
-      <%= link_to "パスワードを変更する", edit_user_registration_path, class: "btn btn-sm btn-success" %>
+      <%= link_to "編集する", edit_user_path, class: "btn btn-sm btn-success",data: {"turbolinks" => false} %>
+      <%= link_to "パスワードを変更する", edit_user_registration_path, class: "btn btn-sm btn-success",data: {"turbolinks" => false} %>
     </div>
 
     <div class="table-wrapper">
