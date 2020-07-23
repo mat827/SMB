@@ -1,30 +1,47 @@
 <div class='container'>
   <div class='row'>
+        <div class="col-md-6" id="image1"></div>
         <div class=" col-md-6 ">
           <div class='content1'>
-            ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
-            ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+            <h2 class='content-title'>SMBとは？</h2>
+            <p class='content-text1'>
+              整骨院の先生が監修したストレッチ口コミサイトになります。<br>
+              ストレッチを様々なカテゴリで検索することができます。<br>
+              また、実際に行ったストレッチを評価や感想といったレビューができ、<br>
+              お気に入りをして自分だけのストレッチリストを作成することができます。
+
+            <p>
           </div>
         </div>
-        <div class="col-md-6" id="image1"></div>
   </div>
   <div class='row inview fadeIn_up'>
+        <div class="col-md-6 ">
+          <div class='content2'>
+            <h2 class='content-title'>体を痛める原因？</h2>
+            <p class='content-text2'>
+              ①筋肉が硬くなっている<br>
+              ②体が冷えている<br>
+              ③姿勢が悪い<br>
+              ④運動不足
+            </p>
+          </div>
+        </div>
         <div class="col-md-6 " id="image2"></div>
-        <div class="col-md-6 ">
-          <div class='content1'>
-            ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
-            ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
-          </div>
-        </div>
   </div>
   <div class='row inview fadeIn_up'>
+        <div class="col-md-6 " id="image4"></div>
         <div class="col-md-6 ">
-          <div class='content1'>
-            ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
-            ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+          <div class='content3'>
+            <h2 class='content-title'>体を痛めないようにする方法？</h2>
+            <p class='content-text3'>
+              ①十分なストレッチをする<br>
+              ②体を冷やさない<br>
+              ③適度に運動をする<br>
+              ④お風呂にしっかり入る<br>
+              ⑤姿勢を意識する
+            </p>
           </div>
         </div>
-        <div class="col-md-6 " id="image4"></div>
   </div>
 
 </div>
@@ -93,5 +110,32 @@
       $(this).stop().addClass("is-show");
     }
   });
+
+  $('.content1').hover(
+    function(){
+      $('.content-text1').fadeIn();
+    },
+    function(){
+      $('.content-text1').fadeOut();
+    }
+    );
+
+  $('.content2').hover(
+    function(){
+      $('.content-text2').fadeIn();
+    },
+    function(){
+      $('.content-text2').fadeOut();
+    }
+    );
+
+  $('.content3').hover(
+    function(){
+      $('.content-text3').fadeIn();
+    },
+    function(){
+      $('.content-text3').fadeOut();
+    }
+    );
 });
 </script>
