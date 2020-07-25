@@ -74,6 +74,7 @@ gem 'ransack'
 gem 'refile', require: 'refile/rails', github: 'manfe/refile'
 gem 'refile-mini_magick'
 gem 'rubocop-airbnb'
+gem "refile-s3"
 gem 'dotenv-rails'
 group :production do
   gem 'mysql2'
