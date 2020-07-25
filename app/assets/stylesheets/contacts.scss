@@ -1,3 +1,35 @@
 // Place all the styles related to the contacts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*アコーディオン追加 */
+#faq-list {
+    padding: 0;
+    list-style: none;
+}
+.faq-list-item {
+  margin:10px;
+  border-bottom:1px solid #ccc;
+  position:relative;
+  cursor:pointer;
+  text-align: left;
+}
+
+.faq-list-item h3 {
+  font-size: 18px;
+}
+
+.faq-list-item span {
+  position:absolute;
+  top:0;
+  right:5px;
+  color:#ccc;
+  font-size:16px;
+}
+
+.answer {
+  font-size: 14px;
+  display: none;
+  padding: 5px 0px;
+  margin-bottom: 15px;
+}
