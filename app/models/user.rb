@@ -15,6 +15,9 @@ class User < ApplicationRecord
   validates :phone_number, presence: true
   validates :is_valid, presence: true
 
+  # お問い合わせ機能と関連付け
+  has_many :contact, dependent: :destroy
+
   # お気に入り機能と関連付け
   has_many :favorites, -> { order(position: :asc) }
   has_many :stretchs, dependent: :destroy
