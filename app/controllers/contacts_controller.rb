@@ -10,9 +10,11 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
+    @contact.user_id = current_user.id
     if @contact.save
-      ContactMailer.contact_mail(@contact).deliver
-      redirect_to stretchs_path, notice: '質問を送信しました'
+      redirect_to root_path, notice: '質問を送信しました'
+    else
+      render :new
     end
   end
 
@@ -20,6 +22,6 @@ class ContactsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def contact_params
-    params.require(:contact).permit(:name, :email, :content)
+    params.require(:contact).permit(:title,:content, :reply, :user_id ,:email)
   end
 end

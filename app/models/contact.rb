@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Contact < ApplicationRecord
-  validates :name, presence: true
-  validates :email, presence: true
+  belongs_to :user
+  validates :title, presence: true
   validates :content, presence: true
 end
