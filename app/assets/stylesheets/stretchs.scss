@@ -5,3 +5,22 @@
 .stretch-text h2{
   border-bottom: ridge 5px #f3b5bd;
 }
+
+/*画像ポップアップ*/
+.stretch-image img{
+  width: 100%;
+  transition-duration: 0.5s;
+}
+.stretch-image:hover img{
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+  transform: translateY(-10px);
+  transition-duration: 0.5s;
+}
+
+.thumbnail img{
+  transition-duration: 0.5s;
+}
+.thumbnail:hover img{
+  transform: scale(1.05);
+  transition-duration: 0.5s;
+}
