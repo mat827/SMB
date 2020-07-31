@@ -5,8 +5,14 @@
 /*reviews*/
 #reviews {
   background-color: white;
-  margin:10px 0;
+  margin:50px 0;
   padding: 10px 0;
+  transition-duration: 0.5s;
+}
+
+#reviews:hover {
+  transform: scale(1.05);
+  transition-duration: 0.5s;
 }
 
 .review-content {
@@ -27,3 +33,6 @@
   margin: 10px;
   padding: 20px;
 }
+
+
+
