@@ -25,17 +25,17 @@
       </div>
       <div class='row inview fadeIn_up'>
         <div class=' col-md-4 col-sm-6 feature text-center'>
-          <span aria-hidden='true' class='glyphicon glyphicon-check' style='font-size: 40px'></span>
+          <span aria-hidden='true' class='glyphicon glyphicon-check top-icon' style='font-size: 40px'></span>
           <h3 class='feature-title'>リアルな口コミ</h3>
           <p>✔  実際の体験してもらった方々のリアルな口コミであなたに最適なストレッチをサポート</p>
         </div>
         <div class=' col-md-4 col-sm-6 feature text-center'>
-          <span aria-hidden='true' class='glyphicon glyphicon-zoom-in' style='font-size: 40px'></span>
+          <span aria-hidden='true' class='glyphicon glyphicon-zoom-in top-icon' style='font-size: 40px'></span>
           <h3 class='feature-title'>探しやすい</h3>
           <p>✔  気になるストレッチをお気に入り登録や最新の口コミから検索可能</p>
         </div>
         <div class=' col-md-4 col-sm-6  feature text-center'>
-          <span aria-hidden='true' class='glyphicon glyphicon-thumbs-up' style='font-size: 40px'></span>
+          <span aria-hidden='true' class='glyphicon glyphicon-thumbs-up top-icon' style='font-size: 40px'></span>
           <h3 class='feature-title'>見やすい</h3>
           <p>✔  分かりやすい説明や画像、自分だけのお気に入りリストを作成</p>
         </div>
@@ -60,13 +60,28 @@
   </div>
 </div>
 
-<!-- スクロールアニメーション -->
+
 <script>
-  $(function(){
+$(function(){
+  // スクロールアニメーション
   $(".inview").on("inview", function (event, isInView) {
     if (isInView) {
       $(this).stop().addClass("is-show");
     }
   });
+
+  // アイコンアニメーション
+  $('.top-icon').hover(
+    function(){
+      $(this).animate({
+        'font-size':'50px'
+      },300);
+    },
+    function(){
+      $(this).animate({
+        'font-size': '40px'
+      },300);
+    }
+    );
 });
 </script>
