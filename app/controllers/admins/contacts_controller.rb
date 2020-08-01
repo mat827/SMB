@@ -26,8 +26,7 @@ class Admins::ContactsController < ApplicationController
     user = User.find(contact.user_id)
     contact.update(contact_params)
     ContactMailer.send_when_admin_reply(user, contact).deliver_now #確認メールを送信
-
-    redirect_to admins_contacts_path
+    redirect_to admins_contacts_path,　notice: '質問を返信しました'
   end
 
    private

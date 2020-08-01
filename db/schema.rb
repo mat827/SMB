@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2020_06_26_120333) do
   create_table "contacts", force: :cascade do |t|
     t.text "title"
     t.text "content"
-    t.integer "reply"
+    t.text "reply"
     t.integer "user_id"
     t.string "email"
     t.datetime "created_at", null: false
