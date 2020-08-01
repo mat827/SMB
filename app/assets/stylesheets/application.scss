@@ -263,7 +263,82 @@ nav .inner ul li a:hover {
   cursor: pointer;
 }
 
+/* ボタンアニメーション */
+.btn-succes {
+  cursor: pointer;
+  margin: 1em auto;
+  padding: 20px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #fff;
+  text-decoration: inherit;
+  background: #20b2aa;
+  box-shadow: 0 6px 0 #047c71, 0 12px 0 rgba(0,0,0,.2);
+  transition: color .3s, background .3s, box-shadow .3s, transform 0.3s;
+}
+.btn-succes:hover {
+  background: #3cc4bd;
+  box-shadow: 0 3px 0 #12978d, 0 6px 0 rgba(0,0,0,.2);
+  transform: translateY(3px);
+  color: #fff;
+}
+.btn-succes:active {
+  color: #ddd;
+  background: #12978d;
+  box-shadow: 0 0 0 #047c71, 0 0 0 rgba(0,0,0,.2);
+  transform: translateY(6px);
+  transition-duration: .1s;
+}
 
 
+.btn-primary {
+  cursor: pointer;
+  margin: 1em auto;
+  padding: 12px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #fff;
+  text-decoration: inherit;
+  background: #4156d6;
+  box-shadow: 0 6px 0 #082687, 0 12px 0 rgba(0, 0, 0, 0.2);
+  transition: color .3s, background .3s, box-shadow .3s, transform 0.3s;
+}
+.btn-primary:hover {
+  background: #6274e2;
+  box-shadow: 0 3px 0 #12978d, 0 6px 0 rgba(0,0,0,.2);
+  transform: translateY(3px);
+}
+.btn-primary:active {
+  color: #ddd;
+  background: #12978d;
+  box-shadow: 0 0 0 #047c71, 0 0 0 rgba(0,0,0,.2);
+  transform: translateY(6px);
+  transition-duration: .1s;
+}
+
+.btn-danger {
+  cursor: pointer;
+  margin: 1em auto;
+  padding: 12px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #fff;
+  text-decoration: inherit;
+  background: #e00f00;
+  box-shadow: 0 6px 0 #921111, 0 12px 0 rgba(0, 0, 0, 0.2);
+  transition: color .3s, background .3s, box-shadow .3s, transform 0.3s;
+}
+.btn-danger:hover {
+  background: #ef5449;
+  box-shadow: 0 3px 0 #12978d, 0 6px 0 rgba(0,0,0,.2);
+  transform: translateY(3px);
+}
+.btn-danger:active {
+  color: #ddd;
+  background: #12978d;
+  box-shadow: 0 0 0 #047c71, 0 0 0 rgba(0,0,0,.2);
+  transform: translateY(6px);
+  transition-duration: .1s;
+}
 
 
