@@ -3,7 +3,9 @@
     <div class='row' id='favorite-item'>
       <div class='col-md-6'>
         <%= link_to stretch_path(favorite.stretch),data: {"turbolinks" => false} do %>
-        <%= attachment_image_tag favorite.stretch, :image, :fill, 500, 500, fallback: "no_image.png", size: "300x300" %>
+          <% if favorite.stretch.stretch_images.present? %>
+            <%= attachment_image_tag favorite.stretch.stretch_images.first, :image, :fill, 500, 500 , size: "300x300"%>
+          <% end %>
         <% end %>
       </div>
       <div class='col-md-6' >
@@ -45,8 +47,3 @@
       }
     });
 </script>
-
-
-
-
-

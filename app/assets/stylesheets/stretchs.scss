@@ -24,3 +24,34 @@
   transform: scale(1.05);
   transition-duration: 0.5s;
 }
+
+/*複数画像*/
+.sliderArea {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+.sliderArea.w300 {
+    max-width: 300px;
+}
+.slick-slide {
+    margin: 0 5px;
+}
+.slick-slide img {
+    width: 100%;
+    height: auto;
+}
+.slick-prev, .slick-next {
+    z-index: 1;
+}
+.slick-prev:before, .slick-next:before {
+    color: #000 !important;
+}
+
+.thumb {
+    margin: 20px 0 0;
+}
+
+.thumb .slick-slide:hover {
+    opacity: .7;
+}

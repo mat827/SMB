@@ -5,10 +5,12 @@ class Admins::StretchsController < ApplicationController
 
   def index
     @stretchs = Stretch.page(params[:page]).search(params[:str])
+
   end
 
   def new
     @stretch = Stretch.new
+    @stretch.stretch_images.build
   end
 
   def create
@@ -22,11 +24,11 @@ class Admins::StretchsController < ApplicationController
   end
 
   def show
-    @stretch = Stretch.find(params[:id])
+    @stretch = Stretch.find_by(id:params[:id])
   end
 
   def edit
-    @stretch = Stretch.find(params[:id])
+    @stretch = Stretch.find_by(id:params[:id])
   end
 
   def update
@@ -45,10 +47,10 @@ class Admins::StretchsController < ApplicationController
       :category_id,
       :favorite_id,
       :name,
-      :image,
       :explanation,
       :action_muscles,
-      :recommended
+      :recommended,
+      stretch_images_images: []
     )
   end
 end

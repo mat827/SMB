@@ -4,9 +4,10 @@ class Stretch < ApplicationRecord
   belongs_to :category
   validates :name, presence: true
   validates :explanation, presence: true
-  validates :image, presence: true
 
-  attachment :image
+  # 複数画像投稿と関連付け
+  has_many :stretch_images, dependent: :destroy
+  accepts_attachments_for :stretch_images, attachment: :image
 
   # お気に入り投稿と関連付け
   has_many :favorites, dependent: :destroy
