@@ -12,7 +12,3 @@ class CategorysController < ApplicationController
     render 'stretchs/index'
   end
 end
-
-# find＝主キーに対応するレコードを取り出す
-# find＿by＝与えられた条件にマッチするレコードのうち最初のレコードだけを返す。
-# find＿where＝与えられた条件にマッチするレコードを全て返す

@@ -2,7 +2,7 @@
   margin-top: 50px;
 }
 
-#image1 {
+#image-introduction {
   padding:50px;
   margin-top: 50px;
   height: 600px;
@@ -13,7 +13,7 @@
   }
 
 
-#image2 {
+#image-body {
   padding:50px;
   margin-top: 50px;
   height: 600px;
@@ -23,7 +23,7 @@
   background-position: center;
   }
 
-#image4 {
+#image-measures {
   padding:50px;
   height: 600px;
   margin-top: 50px;
@@ -33,32 +33,32 @@
   background-position: center;
 }
 
-.content1 {
+.content-introduction {
   margin-top: 150px;
   font-size:24px;
   padding:50px;
 }
 
-.content2 {
+.content-body {
   margin-top: 150px;
   font-size:24px;
   padding:50px;
 }
 
-.content3 {
+.content-measures{
   margin-top: 150px;
   font-size:24px;
   padding:50px;
 }
 
-.content-text1{
+.content-text-introduction{
   display: none;
 }
 
-.content-text2{
+.content-text-body{
   display: none;
 }
-.content-text3{
+.content-text-measures{
   display: none;
 }
 
@@ -72,7 +72,7 @@
 }
 
 
-#image3 {
+#image-profile {
   height: 350px;
   max-width: 100%;
   background-image: image-url("image2.jpeg");

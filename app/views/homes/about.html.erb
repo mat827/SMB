@@ -1,10 +1,10 @@
 <div class='container'>
   <div class='row'>
-        <div class="col-md-6" id="image1"></div>
+        <div class="col-md-6" id="image-introduction"></div>
         <div class=" col-md-6 ">
-          <div class='content1'>
+          <div class='content-introduction'>
             <h2 class='content-title'>SMBとは？</h2>
-            <p class='content-text1'>
+            <p class='content-text-introduction'>
               整骨院の先生が監修したストレッチ口コミサイトになります。<br>
               ストレッチを様々なカテゴリで検索することができます。<br>
               また、実際に行ったストレッチを評価や感想といったレビューができ、<br>
@@ -16,9 +16,9 @@
   </div>
   <div class='row inview fadeIn_up'>
         <div class="col-md-6 ">
-          <div class='content2'>
+          <div class='content-body'>
             <h2 class='content-title'>体を痛める原因？</h2>
-            <p class='content-text2'>
+            <p class='content-text-body'>
               ①筋肉が硬くなっている<br>
               ②体が冷えている<br>
               ③姿勢が悪い<br>
@@ -26,14 +26,14 @@
             </p>
           </div>
         </div>
-        <div class="col-md-6 " id="image2"></div>
+        <div class="col-md-6 " id="image-body"></div>
   </div>
   <div class='row inview fadeIn_up'>
-        <div class="col-md-6 " id="image4"></div>
+        <div class="col-md-6 " id="image-measures"></div>
         <div class="col-md-6 ">
-          <div class='content3'>
+          <div class='content-measures'>
             <h2 class='content-title'>体を痛めないようにする方法？</h2>
-            <p class='content-text3'>
+            <p class='content-text-measures'>
               ①十分なストレッチをする<br>
               ②体を冷やさない<br>
               ③適度に運動をする<br>
@@ -111,30 +111,30 @@
     }
   });
 
-  $('.content1').hover(
+  $('.content-introduction').hover(
     function(){
-      $('.content-text1').fadeIn();
+      $('.content-text-introduction').fadeIn();
     },
     function(){
-      $('.content-text1').fadeOut();
+      $('.content-text-introduction').fadeOut();
     }
     );
 
-  $('.content2').hover(
+  $('.content-body').hover(
     function(){
-      $('.content-text2').fadeIn();
+      $('.content-text-body').fadeIn();
     },
     function(){
-      $('.content-text2').fadeOut();
+      $('.content-text-body').fadeOut();
     }
     );
 
-  $('.content3').hover(
+  $('.content-measures').hover(
     function(){
-      $('.content-text3').fadeIn();
+      $('.content-text-measures').fadeIn();
     },
     function(){
-      $('.content-text3').fadeOut();
+      $('.content-text-measures').fadeOut();
     }
     );
 });
