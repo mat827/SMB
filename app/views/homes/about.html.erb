@@ -50,7 +50,7 @@
     <h2 class='text-center'>Profile</h2>
   </div>
   <div row>
-    <div class="col-md-5 " id="image3"></div>
+    <div class="col-md-5 " id="image-profile"></div>
     <div class="col-md-7 ">
       <div id='profile-text'>
       <h3 class='discription-title'>MyName</h3>
@@ -103,39 +103,4 @@
 </div>
 
 <!-- スクロールアニメーション -->
-<script>
-  $(function(){
-  $(".inview").on("inview", function (event, isInView) {
-    if (isInView) {
-      $(this).stop().addClass("is-show");
-    }
-  });
-
-  $('.content-introduction').hover(
-    function(){
-      $('.content-text-introduction').fadeIn();
-    },
-    function(){
-      $('.content-text-introduction').fadeOut();
-    }
-    );
-
-  $('.content-body').hover(
-    function(){
-      $('.content-text-body').fadeIn();
-    },
-    function(){
-      $('.content-text-body').fadeOut();
-    }
-    );
-
-  $('.content-measures').hover(
-    function(){
-      $('.content-text-measures').fadeIn();
-    },
-    function(){
-      $('.content-text-measures').fadeOut();
-    }
-    );
-});
-</script>
+<script src="animation.js"></script>
