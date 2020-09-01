@@ -41,21 +41,22 @@ https://docs.google.com/spreadsheets/d/1PpSMSytPTj0FGJ_AmHRLSiwg39dXvVA4AnjkYBdq
 ### 開発環境
 - OS
 
-Linux(Ubuntu)
+    Linux(Ubuntu)
 
 - 言語
 
-HTML,CSS,JavaScript,Ruby,SQL
+    HTML,CSS,JavaScript,Ruby,SQL
 
 - フレームワーク
 
-Ruby on Rails,
-Bootstrap
+    Ruby on Rails,
+    Bootstrap
 
 - JSライブラリ
 
-jQuery
+    jQuery
 
 - インフラ
-AWS(EC2,RDS,EIP)
+
+    AWS(EC2,RDS,EIP)
 
