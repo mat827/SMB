@@ -28,6 +28,7 @@ SMB
 - ログインに使用するメールアドレス、パスワードについては製作者にお問い合わせください。
 - ログイン後画面上部のメニューより各情報を一覧できます。
 - 各情報の一覧画面より新規登録、変更などが行えます。
+- ユーザーの質問に対して返信することができます
 
 ユーザーの皆様へ
 - トップページはどなたでも閲覧いただけます。
@@ -39,16 +40,20 @@ https://docs.google.com/spreadsheets/d/1PpSMSytPTj0FGJ_AmHRLSiwg39dXvVA4AnjkYBdq
 
 ### 開発環境
 - OS
+
 Linux(Ubuntu)
 
 - 言語
+
 HTML,CSS,JavaScript,Ruby,SQL
 
 - フレームワーク
-Ruby on Rails
+
+Ruby on Rails,
 Bootstrap
 
 - JSライブラリ
+
 jQuery
 
 - インフラ
