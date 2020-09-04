@@ -41,7 +41,7 @@ https://docs.google.com/spreadsheets/d/1PpSMSytPTj0FGJ_AmHRLSiwg39dXvVA4AnjkYBdq
 ### 開発環境
 - OS
 
-    Linux(Ubuntu)
+    Linux(CentOS)
 
 - 言語
 
