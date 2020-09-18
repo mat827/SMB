@@ -34,9 +34,19 @@ SMB
 - トップページはどなたでも閲覧いただけます。
 - 会員登録していただくとレビュー機能など全ての機能をご利用いただけます。
 
+テストユーザ メールアドレス aaa@aaa パスワード aaaaaa
+管理者ユーザー メールアドレス mst@test.com パスワード aaaaaa
+
 
 ### 機能一覧
 https://docs.google.com/spreadsheets/d/1PpSMSytPTj0FGJ_AmHRLSiwg39dXvVA4AnjkYBdqatQ/edit?usp=sharing
+
+
+### AWS構成図
+https://drive.google.com/file/d/1tELrEvTqkkdJ3VQ7GEABqWI5kH3tdjct/view?usp=sharing
+
+### ER図
+https://drive.google.com/file/d/1TA0he1mZ9DrD4fG1VX2PCe6wb2ovuOQp/view?usp=sharing
 
 ### 開発環境
 - OS
