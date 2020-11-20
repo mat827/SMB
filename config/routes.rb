@@ -11,7 +11,14 @@ Rails.application.routes.draw do
   end
   root 'homes#index'
   get 'about' => 'homes#about', as: 'about'
-  devise_for :users
+
+  devise_for :users, controllers: {
+    registrations: 'users/registrations'
+  }
+
+  devise_scope :user do
+    post 'users/guest_sign_in', to: 'users/sessions#new_guest'
+  end
 
   resources :stretchs, only: %i(index show)
 

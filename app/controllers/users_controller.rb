@@ -2,6 +2,7 @@
 
 class UsersController < ApplicationController
   before_action :authenticate_user!
+  before_action :check_guest, only: %i[update withdraw]
   def show
     @user = current_user
     @reviews = Review.includes(:user, :stretch).where(user_id: @user.id).page(params[:page])
@@ -20,6 +21,13 @@ class UsersController < ApplicationController
     else
       flash[:alert] = '入力されていない箇所があります'
       render 'edit'
+    end
+  end
+
+  def check_guest
+    user = current_user
+    if user.email == 'guest@example.com'
+      redirect_to root_path, notice: 'ゲストユーザーの変更・退会はできません。'
     end
   end
 
