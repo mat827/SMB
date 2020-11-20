@@ -6,14 +6,13 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :first_name, presence: true
-  validates :family_name, presence: true
-  validates :family_name_yomi, presence: true
-  validates :first_name_yomi, presence: true
-  validates :email, presence: true
-  validates :encrypted_password, presence: true
-  validates :phone_number, presence: true
-  validates :is_valid, presence: true
+  # ゲストログイン
+  def self.guest
+    find_or_create_by!(email: 'guest@example.com') do |user|
+      user.password = SecureRandom.urlsafe_base64
+    end
+  end
+
 
   # お問い合わせ機能と関連付け
   has_many :contact, dependent: :destroy
